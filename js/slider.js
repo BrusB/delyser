@@ -28,7 +28,7 @@ class TeamSlider {
     
     getCardsPerView() {
         const containerWidth = this.track.parentElement.offsetWidth;
-        const cardWidth = 300; // Ancho mínimo de cada tarjeta
+        const cardWidth = 300; // Ancho mï¿½nimo de cada tarjeta
         const gap = 20; // Espacio entre tarjetas
         const padding = 40; // Padding del contenedor
         
@@ -52,7 +52,7 @@ class TeamSlider {
     createDots() {
         this.dotsContainer.innerHTML = '';
         
-        // Crear un dot por cada "página" del slider
+        // Crear un dot por cada "pï¿½gina" del slider
         for (let i = 0; i < this.totalPages; i++) {
             const dot = document.createElement('div');
             dot.className = 'dot';
@@ -87,12 +87,12 @@ class TeamSlider {
             card.style.width = cardWidth + 'px';
         });
         
-        // Calcular el offset basado en la página actual
+        // Calcular el offset basado en la pï¿½gina actual
         const cardsToMove = this.currentPage * this.cardsPerView;
         const offset = -(cardsToMove * (cardWidth + gap));
         this.track.style.transform = `translateX(${offset}px)`;
         
-        // Los botones siempre están habilitados para comportamiento circular
+        // Los botones siempre estï¿½n habilitados para comportamiento circular
         this.prevBtn.disabled = false;
         this.nextBtn.disabled = false;
         
@@ -103,7 +103,7 @@ class TeamSlider {
     goToPage(pageIndex) {
         this.currentPage = pageIndex;
         this.updateSlider();
-        // Forzar actualización de dots
+        // Forzar actualizaciï¿½n de dots
         this.updateDots();
     }
     
@@ -158,7 +158,7 @@ class TeamSlider {
             this.currentPage = this.totalPages - 1;
         }
         
-        // Recrear dots si cambió el número de páginas
+        // Recrear dots si cambiï¿½ el nï¿½mero de pï¿½ginas
         if (oldTotalPages !== this.totalPages) {
             this.createDots();
         }
@@ -167,7 +167,7 @@ class TeamSlider {
     }
     
     addEventListeners() {
-        // Botones de navegación
+        // Botones de navegaciï¿½n
         this.prevBtn.addEventListener('click', () => {
             this.stopAutoPlay();
             this.prevSlide();
@@ -204,7 +204,7 @@ class TeamSlider {
             this.resumeAutoPlay();
         });
         
-        // Navegación con teclado
+        // Navegaciï¿½n con teclado
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
                 this.stopAutoPlay();
@@ -217,7 +217,7 @@ class TeamSlider {
             }
         });
         
-        // Touch/swipe support para móviles
+        // Touch/swipe support para mï¿½viles
         let touchStartX = 0;
         let touchEndX = 0;
         
@@ -251,7 +251,7 @@ class TeamSlider {
     }
 }
 
-// Inicializar el slider cuando se carga la página
+// Inicializar el slider cuando se carga la pï¿½gina
 document.addEventListener('DOMContentLoaded', () => {
     new TeamSlider();
 });

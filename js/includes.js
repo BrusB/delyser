@@ -1,6 +1,6 @@
 /**
  * Sistema de Includes MEJORADO para Delyser Abogados
- * Versión corregida para páginas de servicios
+ * Versión actualizada con menú móvil responsive
  */
 
 class DelyserlIncludes {
@@ -29,7 +29,7 @@ class DelyserlIncludes {
     return '';
   }
 
-  // Header HTML con rutas dinámicas
+  // Header HTML con rutas dinámicas y botón móvil
   getHeaderHTML() {
     return `
       <header>
@@ -37,6 +37,9 @@ class DelyserlIncludes {
           <a href="${this.basePath}index.html" class="logo">
             <img src="${this.basePath}img/img-index/logo-blanco.png" alt="Delyser Abogados Logo">
           </a>
+          <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+            <i class="ph ph-list"></i>
+          </button>
           <ul class="nav-links">
             <li><a href="${this.basePath}index.html" data-page="index">INICIO</a></li>
 
@@ -94,8 +97,8 @@ class DelyserlIncludes {
       <footer class="footer">
         <div class="footer-content">
           <div class="footer-info">
-            <h4>DELYSER ABOGADOS S.L.P.</h4>
-            <p>C/Doctor Fleming 30, 1ºD 28036 Madrid</p>
+            <h3>DELYSER ABOGADOS S.L.P.</h3>
+            <p>C/Doctor Fleming 50, 1ºD 28036 Madrid</p>
             <div class="footer-contact">
               <p>T: (+34) 91 541 01 47</p>
               <p>F: (+34) 91 542 66 98</p>
@@ -181,7 +184,7 @@ class DelyserlIncludes {
     }, 200);
   }
 
-  // Inicializa los submenús
+  // Inicializa los submenús (desktop y mobile)
   initSubmenu() {
     console.log('📋 Inicializando submenús...');
     
@@ -202,25 +205,40 @@ class DelyserlIncludes {
           link.addEventListener("click", function (e) {
             e.preventDefault();
 
-            // Cierra otros submenús
-            submenus.forEach(({ itemId: otherId }) => {
-              if (otherId !== itemId) {
-                const otherItem = document.getElementById(otherId);
-                if (otherItem) otherItem.classList.remove("open");
-              }
-            });
+            // Comportamiento diferente según el tamaño de pantalla
+            if (window.innerWidth <= 768) {
+              // En móvil: toggle del submenú actual
+              item.classList.toggle("open");
+              
+              // Cerrar otros submenús
+              submenus.forEach(({ itemId: otherId }) => {
+                if (otherId !== itemId) {
+                  const otherItem = document.getElementById(otherId);
+                  if (otherItem) otherItem.classList.remove("open");
+                }
+              });
+            } else {
+              // En desktop: comportamiento normal
+              // Cierra otros submenús
+              submenus.forEach(({ itemId: otherId }) => {
+                if (otherId !== itemId) {
+                  const otherItem = document.getElementById(otherId);
+                  if (otherItem) otherItem.classList.remove("open");
+                }
+              });
 
-            // Toggle este submenú
-            item.classList.toggle("open");
+              // Toggle este submenú
+              item.classList.toggle("open");
+            }
           });
         } else {
           console.warn(`⚠️ No se pudo configurar submenú: ${itemId}`);
         }
       });
 
-      // Cerrar submenús al hacer clic fuera
+      // Cerrar submenús al hacer clic fuera (solo en desktop)
       document.addEventListener("click", function (e) {
-        if (!e.target.closest(".has-submenu")) {
+        if (!e.target.closest(".has-submenu") && window.innerWidth > 768) {
           submenus.forEach(({ itemId }) => {
             const item = document.getElementById(itemId);
             if (item) item.classList.remove("open");
@@ -230,6 +248,85 @@ class DelyserlIncludes {
 
       console.log('✅ Submenús inicializados correctamente');
     }, 300);
+  }
+
+  // Inicializa el menú móvil
+  initMobileMenu() {
+    console.log('📱 Inicializando menú móvil...');
+    
+    setTimeout(() => {
+      const mobileButton = document.querySelector('.mobile-menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      
+      if (!mobileButton || !navLinks) {
+        console.warn('⚠️ No se encontraron elementos del menú móvil');
+        return;
+      }
+      
+      // Toggle del menú principal
+      mobileButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        
+        navLinks.classList.toggle('active');
+        const isOpen = navLinks.classList.contains('active');
+        
+        // Cambiar el icono
+        const icon = mobileButton.querySelector('i');
+        if (icon) {
+          icon.className = isOpen ? 'ph ph-x' : 'ph ph-list';
+        }
+        
+        // Actualizar ARIA
+        mobileButton.setAttribute('aria-expanded', isOpen.toString());
+        
+        // Prevenir scroll del body cuando el menú está abierto
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      
+      // Cerrar menú al hacer clic fuera
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.navbar') && window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+          const icon = mobileButton.querySelector('i');
+          if (icon) {
+            icon.className = 'ph ph-list';
+          }
+          mobileButton.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        }
+      });
+      
+      // Cerrar menú al cambiar tamaño de pantalla
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+          navLinks.classList.remove('active');
+          const icon = mobileButton.querySelector('i');
+          if (icon) {
+            icon.className = 'ph ph-list';
+          }
+          mobileButton.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        }
+      });
+      
+      // Cerrar menú al hacer clic en enlaces (excepto los que tienen submenú)
+      const menuLinks = navLinks.querySelectorAll('a:not([href^="#"])');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 768) {
+            navLinks.classList.remove('active');
+            const icon = mobileButton.querySelector('i');
+            if (icon) {
+              icon.className = 'ph ph-list';
+            }
+            mobileButton.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        });
+      });
+      
+      console.log('✅ Menú móvil inicializado correctamente');
+    }, 400);
   }
 
   // Inicialización principal
@@ -243,6 +340,7 @@ class DelyserlIncludes {
     setTimeout(() => {
       this.setActiveNavigation();
       this.initSubmenu();
+      this.initMobileMenu();
       
       // Disparar evento personalizado para otros scripts
       document.dispatchEvent(new CustomEvent('includesLoaded'));
