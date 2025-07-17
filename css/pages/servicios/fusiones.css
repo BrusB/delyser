@@ -1,0 +1,175 @@
+.triangle {
+position: absolute;
+width: 0;
+height: 0;
+}
+
+.triangle-1 {
+    border-left: 0px solid transparent;
+    border-right: 1100px solid transparent;
+    border-bottom: 750px solid #d4d4d4;
+  /*  border-bottom: 750px solid #2c3e50;  Azul corporativo */
+    top: -8%;
+    left: -3%;
+    opacity: 0.7;
+    animation: slowFloat 6s ease-in-out infinite alternate;
+    transform-origin: bottom right;
+}
+
+/* Triángulo complementario - Derecha inferior (Empresa B) */
+.triangle-2 {
+  /*  border-top: 650px solid #34495e;  Azul más oscuro */
+    border-top: 650px solid #b7b7b7;
+    border-left: 0px solid transparent;
+    border-right: 950px solid transparent;
+    bottom: -12%;
+    right: -5%;
+    opacity: 0.6;
+    animation: slowFloat 6s ease-in-out infinite reverse alternate;
+    transform-origin: top left;
+}
+
+/* Triángulo de conexión - Centro (La fusión) */
+.triangle-3 {
+    border-top: 400px solid #b8b8b8; /* Gris equilibrado */
+    border-left: 600px solid transparent;
+    border-right: 600px solid transparent;
+    top: 35%;
+    left: 25%;
+    opacity: 0.4;
+    animation: subtleRotate 8s linear infinite alternate;
+    transform-origin: center bottom;
+    transform: rotate(-12deg);
+}
+
+.triangle-4 {
+left: 10%;
+top: 10%;
+}
+
+
+.triangle-4 img {
+width: 1200px;
+animation: subtleRotate 5s linear infinite alternate;
+transform-origin: 50% 100%;
+}
+
+
+/* Animaciones más sutiles */
+@keyframes slowFloat {
+0%, 100% {
+transform: translateY(0px) translateX(0px);
+}
+50% {
+transform: translateY(-15px) translateX(10px);
+}
+}
+
+@keyframes subtleRotate {
+0% {
+transform: rotate(0deg);
+}
+100% {
+transform: rotate(3deg);
+}
+}
+
+.p1{
+    text-align: center; 
+    width: 1000px; 
+    margin: 0 auto; 
+      background: rgba(255, 255, 255, 0.493);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+}
+
+.texto-fus-1 {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales en lugar de auto-fit */
+grid-template-areas:
+"title title title"
+"block1 block2 block3";
+gap: 2rem;
+text-align: center;
+align-items: start;
+justify-content: center; /* Centrar el contenido del grid */
+max-width: 1200px;
+margin: 2rem auto;
+      background: rgba(255, 255, 255, 0.493);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+}
+
+.texto-fus-1 h2 {
+grid-area: title;
+margin: 0 0 1.5rem;
+}
+
+/* Asignar cada uno de los tres divs a su celda */
+.texto-fus-1 > div:nth-of-type(1) {
+grid-area: block1;
+}
+.texto-fus-1 > div:nth-of-type(2) {
+grid-area: block2;
+}
+.texto-fus-1 > div:nth-of-type(3) {
+grid-area: block3;
+}
+
+/* Centrar contenido interno de cada bloque */
+.texto-fus-1 > div {
+text-align: center;
+}
+
+
+.texto-fus-2 {
+max-width: 1200px; /* Ancho máximo del contenedor */
+margin: 0 auto; /* Centrar horizontalmente */
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 2rem 3rem; /* Márgenes internos generosos */
+gap: 5rem; /* Espacio entre texto e imagen */
+text-align: justify;
+      background: rgba(255, 255, 255, 0.493);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+}
+
+.texto-fus-2 .p2 {
+width:  60%; 
+} 
+
+.texto-fus-2 h2 {
+  text-align: left;
+}
+
+.texto-fus-2 img {
+width:500px;
+}
+
+.p3 {
+    text-align:center;
+    padding: 4rem;
+    width: fit-content; /* Se adapta al contenido */
+    margin: 0 auto;
+      background: rgba(255, 255, 255, 0.493);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contratos tecnológicos y RGPD </title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/equipo.css"> 
+ 
+
+</head>
+<body>
+  <!-- Contenedor de formas geométricas de fondo -->
+  <div class="shapes-container">
+    <div class="triangle triangle-1"></div>
+    <div class="triangle triangle-2"></div>
+    <div class="triangle triangle-3"></div>
+  </div>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="img/img-index/logo-blanco.png" alt="Delyser Abogados Logo">
+      </a>
+      <ul class="nav-links">
+        <!-- Agrega la clase "active" al enlace de la secciÃ³n actual -->
+        <li><a href="index.html" class="active">INICIO</a></li>
+
+        <li class="has-submenu" id="servicios-item">
+          <a href="#servicios" id="servicios-link">SERVICIOS</a>
+          <ul class="submenu" id="servicios-submenu">
+            <!-- Primera fila -->
+            <div class="submenu-section">
+              <h3 class="submenu-title">Áreas de especialización</h3>
+              <div class="submenu-row">
+                <li><a href="servicios/litigios.html">Litigios</a></li>
+                <li><a href="servicios/clinicas.html">Valoración de clínicas</a></li>
+                <li><a href="servicios/compliance.html">Compliance Penal</a></li>
+                <li><a href="servicios/rgpd.html">Contratos tecnológicos y RGPD</a></li>
+                <li><a href="servicios/fusiones.html">Fusiones y Adquisiciones</a></li>
+              </div>
+            </div>
+            <!-- Segunda fila -->
+            <div class="submenu-section">
+              <h3 class="submenu-title">Servicios</h3>
+              <div class="submenu-row">
+                <li><a href="servicios/corporate.html">Corporate</a></li>
+                <li><a href="servicios/urbanismo.html">Urbanismo</a></li>
+                <li><a href="servicios/legal.html">Legal</a></li>
+                <li><a href="servicios/digital.html">Digital</a></li>
+                <li><a href="servicios/dental.html">Dental</a></li>
+                <li><a href="servicios/fiscal.html">Fiscal</a></li>                
+              </div>
+            </div>
+          </ul>
+        </li>
+
+        <li><a href="equipo.html">EQUIPO</a></li>
+
+        <li class="has-submenu" id="recursos-item">
+          <a href="#recursos" id="recursos-link">RECURSOS</a>
+          <ul class="submenu" id="recursos-submenu">
+            <div class="submenu-row">
+              <li><a href="delyser-cloud.html">Delyser Cloud</a></li>
+              <li><a href="campus-delyser.html">Campus Delyser</a></li>
+              <li><a href="canal360.html">Canal 360</a></li>
+            </div>
+          </ul>
+        </li>     
+
+        <li><a href="derecho-1-min.html">DERECHO EN 1 MIN</a></li>
+
+        <li><a href="contacto.html">CONTACTO</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección de Socios -->
+    <section class="socios-section">
+      <h1 class="socios-title">Socios</h1>
+    <div class="divider-dot-center fade-in-up delay 4">
+        <div class="dot"></div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="team-grid">
+        <!-- José Luis Gómez -->
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/jlg-team.webp" alt="José Luis Gómez" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del socio</div>
+          </div>
+          <div class="member-name">José Luis Gómez</div>
+          <div class="member-position">Socio-Director / Abogado</div>
+          <button class="info-btn" onclick="toggleDetails(this)">+ info</button>
+          <div class="team-details">
+            <h4>Experiencia Profesional</h4>
+            <p>Más de 25 años de experiencia en el sector legal, especializado en dirección de despachos jurídicos y gestión empresarial.</p>
+            <h4>Áreas de Especialización</h4>
+            <ul>
+              <li>Derecho Societario</li>
+              <li>Fusiones y Adquisiciones</li>
+              <li>Reestructuraciones Empresariales</li>
+              <li>Compliance Corporativo</li>
+            </ul>
+            <p>Licenciado en Derecho por la Universidad Complutense de Madrid. Master en Dirección de Empresas (MBA).</p>
+          </div>
+        </div>
+
+        <!-- Almudena Rodríguez -->
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/arr-team.webp" alt="Almudena Rodríguez" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del socio</div>
+          </div>
+          <div class="member-name">Almudena Rodríguez</div>
+          <div class="member-position">Socia / Abogada<br>Derecho Procesal y Arbitraje</div>
+          <button class="info-btn" onclick="toggleDetails(this)">+ info</button>
+          <div class="team-details">
+            <h4>Experiencia Profesional</h4>
+            <p>Especialista en resolución de conflictos con más de 15 años de experiencia en litigios complejos y procedimientos arbitrales.</p>
+            <h4>Áreas de Especialización</h4>
+            <ul>
+              <li>Arbitraje Comercial Internacional</li>
+              <li>Litigios Civiles y Mercantiles</li>
+              <li>Mediación y Conciliación</li>
+              <li>Derecho Procesal</li>
+            </ul>
+            <p>Licenciada en Derecho por la Universidad Autónoma de Madrid. Especialización en Arbitraje Internacional.</p>
+          </div>
+        </div>
+
+        <!-- César Díaz Toledo -->
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/cdt-team.webp" alt="César Díaz Toledo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del socio</div>
+          </div>
+          <div class="member-name">César Díaz Toledo</div>
+          <div class="member-position">Socio / Abogado<br>Derecho Penal - Corporate Compliance</div>
+          <button class="info-btn" onclick="toggleDetails(this)">+ info</button>
+          <div class="team-details">
+            <h4>Experiencia Profesional</h4>
+            <p>Experto en derecho penal económico y compliance corporativo con amplia experiencia en prevención de delitos empresariales.</p>
+            <h4>Áreas de Especialización</h4>
+            <ul>
+              <li>Compliance Penal</li>
+              <li>Derecho Penal Económico</li>
+              <li>Blanqueo de Capitales</li>
+              <li>Responsabilidad Penal de las Personas Jurídicas</li>
+            </ul>
+            <p>Licenciado en Derecho por la Universidad Carlos III de Madrid. Master en Compliance y Prevención de Delitos.</p>
+          </div>
+        </div>
+
+        <!-- F. Javier López Alonso -->
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/jal-team.webp" alt="F. Javier López Alonso" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del socio</div>
+          </div>
+          <div class="member-name">F. Javier López Alonso</div>
+          <div class="member-position">Socio / Abogado<br>Contratos Tecnológicos y Protección de Datos</div>
+          <button class="info-btn" onclick="toggleDetails(this)">+ info</button>
+          <div class="team-details">
+            <h4>Experiencia Profesional</h4>
+            <p>Especialista en nuevas tecnologías y protección de datos con amplia experiencia en contratos tecnológicos y RGPD.</p>
+            <h4>Áreas de Especialización</h4>
+            <ul>
+              <li>Protección de Datos (RGPD)</li>
+              <li>Contratos Tecnológicos</li>
+              <li>Derecho Digital</li>
+              <li>Propiedad Intelectual</li>
+            </ul>
+            <p>Licenciado en Derecho. Especialización en Derecho de las Nuevas Tecnologías.</p>
+          </div>
+        </div>
+
+        <!-- Carmen Gutiérrez -->
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/cgt-team.webp" alt="Carmen Gutiérrez" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del socio</div>
+          </div>
+          <div class="member-name">Carmen Gutiérrez</div>
+          <div class="member-position">Socia / Abogada<br>Derecho Fiscal y de Contabilidad</div>
+          <button class="info-btn" onclick="toggleDetails(this)">+ info</button>
+          <div class="team-details">
+            <h4>Experiencia Profesional</h4>
+            <p>Experta en derecho fiscal y tributario con más de 20 años de experiencia en asesoramiento fiscal empresarial.</p>
+            <h4>Áreas de Especialización</h4>
+            <ul>
+              <li>Derecho Fiscal y Tributario</li>
+              <li>Planificación Fiscal</li>
+              <li>Contabilidad Empresarial</li>
+              <li>Inspecciones Tributarias</li>
+            </ul>
+            <p>Licenciada en Derecho y Económicas. Master en Asesoramiento Fiscal.</p>
+          </div>
+        </div>
+
+        <!-- Luis Miguel Sacristán -->
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/lms-team.webp" alt="Luis Miguel Sacristán" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del socio</div>
+          </div>
+          <div class="member-name">Luis Miguel Sacristán</div>
+          <div class="member-position">Socio / Abogado<br>Derecho Laboral</div>
+          <button class="info-btn" onclick="toggleDetails(this)">+ info</button>
+          <div class="team-details">
+            <h4>Experiencia Profesional</h4>
+            <p>Especialista en derecho laboral y de la seguridad social con amplia experiencia en conflictos laborales.</p>
+            <h4>Áreas de Especialización</h4>
+            <ul>
+              <li>Derecho Laboral</li>
+              <li>Seguridad Social</li>
+              <li>Despidos y Negociación Colectiva</li>
+              <li>Prevención de Riesgos Laborales</li>
+            </ul>
+            <p>Licenciado en Derecho. Especialización en Derecho del Trabajo.</p>
+          </div>
+        </div>
+
+        <!-- María Victoria Vázquez -->
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/mvl-team.webp" alt="María Victoria Vázquez" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del socio</div>
+          </div>
+          <div class="member-name">María Victoria Vázquez</div>
+          <div class="member-position">Socia / Abogada<br>Derecho Inmobiliario, Urbanístico y Administrativo</div>
+          <button class="info-btn" onclick="toggleDetails(this)">+ info</button>
+          <div class="team-details">
+            <h4>Experiencia Profesional</h4>
+            <p>Experta en derecho inmobiliario y urbanístico con más de 18 años de experiencia en el sector.</p>
+            <h4>Áreas de Especialización</h4>
+            <ul>
+              <li>Derecho Inmobiliario</li>
+              <li>Derecho Urbanístico</li>
+              <li>Derecho Administrativo</li>
+              <li>Promoción Inmobiliaria</li>
+            </ul>
+            <p>Licenciada en Derecho. Especialización en Derecho Inmobiliario y Urbanístico.</p>
+          </div>
+        </div>
+
+        <!-- Mercedes Aguilar -->
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/mag-team.webp" alt="Mercedes Aguilar" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del socio</div>
+          </div>
+          <div class="member-name">Mercedes Aguilar</div>
+          <div class="member-position">Socia / Abogada<br>Derecho Mercantil y Sucesiones</div>
+          <button class="info-btn" onclick="toggleDetails(this)">+ info</button>
+          <div class="team-details">
+            <h4>Experiencia Profesional</h4>
+            <p>Especialista en derecho mercantil y sucesorio con amplia experiencia en gestión patrimonial.</p>
+            <h4>Áreas de Especialización</h4>
+            <ul>
+              <li>Derecho Mercantil</li>
+              <li>Derecho de Sucesiones</li>
+              <li>Gestión Patrimonial</li>
+              <li>Derecho de Familia Patrimonial</li>
+            </ul>
+            <p>Licenciada en Derecho. Especialización en Derecho Mercantil y Sucesorio.</p>
+          </div>
+        </div>
+
+        <!-- Alberto Chivato -->
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/ach-team.webp" alt="Alberto Chivato" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del socio</div>
+          </div>
+          <div class="member-name">Alberto Chivato</div>
+          <div class="member-position">Socio / Abogado<br>Derecho de Familia</div>
+          <button class="info-btn" onclick="toggleDetails(this)">+ info</button>
+          <div class="team-details">
+            <h4>Experiencia Profesional</h4>
+            <p>Experto en derecho de familia con más de 15 años de experiencia en casos complejos de separación y divorcio.</p>
+            <h4>Áreas de Especialización</h4>
+            <ul>
+              <li>Derecho de Familia</li>
+              <li>Separaciones y Divorcios</li>
+              <li>Custodias y Regímenes de Visitas</li>
+              <li>Adopciones</li>
+            </ul>
+            <p>Licenciado en Derecho. Especialización en Derecho de Familia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Personal Profesional -->
+    <section class="personal-section">
+      <h1 class="socios-title fade-in-up delay-3">Personal Profesional</h1>
+      <div class="divider-dot-center fade-in-up delay 4">
+          <div class="dot"></div>
+      </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="team-grid">
+        <!-- Personal Profesional - Ejemplo -->
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/amf-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Ana Monago</div>
+          <div class="member-position">Abogada<br>Derecho Laboral</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/amp-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Alejandra Martin</div>
+          <div class="member-position">Abogada<br>Derecho Penal y Corporate Compliance</div>
+        </div>        
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/bbm-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Bruno Bullón</div>
+          <div class="member-position">Administrador de Sistemas<br>Departamento IT</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/cps-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Cristina Pascual</div>
+          <div class="member-position">Economista<br>Departamento de Contabilidad</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/czc-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Claudia Ziegler</div>
+          <div class="member-position">Paralegal<br>Derecho Mercantil</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/dgm-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Daniel Gallego</div>
+          <div class="member-position">Abogado<br>Derecho Inmobiliario</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/edf-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Esther Díaz</div>
+          <div class="member-position">Editora de contenidos<br>Departamento de Comunicación</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/gmr-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Guillermo Morales</div>
+          <div class="member-position">Desarrollador Web<br>Departamento IT</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/gsm-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Gabriela Sotomayor</div>
+          <div class="member-position">Abogada<br>Derecho Mercantil</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/jfm-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Jorge Fernández</div>
+          <div class="member-position">Abogado<br>Departamento Contabilidad</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/ptg-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Francisco De la Torre Gómez</div>
+          <div class="member-position">Abogado<br>Derecho Laboral</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/rvp-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Rocío Vega</div>
+          <div class="member-position">Economista<br>Departamento Contabilidad</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/rzb-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Rocío Zorita</div>
+          <div class="member-position">Atención al cliente</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/sml-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Sofia Marcos</div>
+          <div class="member-position">Abogada<br>Derecho de Familia</div>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="img/img-index/equipo/ssg-team.webp" alt="Miembro del Personal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="photo-placeholder" style="display: none;">Foto del profesional</div>
+          </div>
+          <div class="member-name">Sonsoles Sánchez</div>
+          <div class="member-position">Economista<br>Departamento Contabilidad</div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>DELYSER ABOGADOS S.L.P.</h3>
+        <p>C/Doctor Fleming 30, 1ºD 28036 Madrid</p>
+        <div class="footer-contact">
+          <p>T: (+34) 91 541 01 47</p>
+          <p>F: (+34) 91 542 66 98</p>
+          <p>delyser@delyser.com</p>
+        </div>
+      </div>
+      
+      <div class="footer-logo">
+        <img src="img/img-index/logo-blanco.png" alt="Delyser Abogados Logo">
+      </div>
+
+      <div class="footer-social">
+        <a href="#" class="social-icon instagram" title="Instagram">
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+        <a href="#" class="social-icon twitter" title="Twitter/X">
+          <i class="ph ph-x-logo"></i>
+        </a>
+        <a href="#" class="social-icon linkedin" title="LinkedIn">
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+        <a href="#" class="social-icon facebook" title="Facebook">
+          <i class="ph ph-facebook-logo"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+<button class="scroll-to-top" title="Volver arriba"></button>
+
+<script src="js/btn-scroll.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/scroll-animations2.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/submenu.js"></script>
+<script src="js/smooth-scroll.js"></script>
+<script src="js/equipo.js"></script>
+</body>
+</html>

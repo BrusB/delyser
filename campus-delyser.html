@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Delyser</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/campus-delyser.css"> 
+ 
+
+</head>
+<body>
+
+  <!-- Contenedor de formas geométricas de fondo -->
+  <div class="shapes-container">
+    <div class="triangle triangle-1"></div>
+    <div class="triangle triangle-2"></div>
+    <div class="triangle triangle-3"></div>
+    <div class="triangle triangle-4"><img src="img/img-servicios/digital.png"></div>
+
+    <!-- <div class="triangle triangle-4"><img src="img/img-litigios/balanza3.png"></div> -->
+  </div>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="img/img-index/logo-blanco.png" alt="Delyser Abogados Logo">
+      </a>
+      <ul class="nav-links">
+        <!-- Agrega la clase "active" al enlace de la secciÃ³n actual -->
+        <li><a href="index.html" class="active">INICIO</a></li>
+
+        <li class="has-submenu" id="servicios-item">
+          <a href="#servicios" id="servicios-link">SERVICIOS</a>
+          <ul class="submenu" id="servicios-submenu">
+            <!-- Primera fila -->
+            <div class="submenu-section">
+              <h3 class="submenu-title">Áreas de especialización</h3>
+              <div class="submenu-row">
+                <li><a href="servicios/litigios.html">Litigios</a></li>
+                <li><a href="servicios/clinicas.html">Valoración de clínicas</a></li>
+                <li><a href="servicios/compliance.html">Compliance Penal</a></li>
+                <li><a href="servicios/rgpd.html">Contratos tecnológicos y RGPD</a></li>
+                <li><a href="servicios/fusiones.html">Fusiones y Adquisiciones</a></li>
+              </div>
+            </div>
+            <!-- Segunda fila -->
+            <div class="submenu-section">
+              <h3 class="submenu-title">Servicios</h3>
+              <div class="submenu-row">
+                <li><a href="servicios/corporate.html">Corporate</a></li>
+                <li><a href="servicios/urbanismo.html">Urbanismo</a></li>
+                <li><a href="servicios/legal.html">Legal</a></li>
+                <li><a href="servicios/digital.html">Digital</a></li>
+                <li><a href="servicios/dental.html">Dental</a></li>
+                <li><a href="servicios/fiscal.html">Fiscal</a></li>                
+              </div>
+            </div>
+          </ul>
+        </li>
+
+        <li><a href="equipo.html">EQUIPO</a></li>
+
+        <li class="has-submenu" id="recursos-item">
+          <a href="#recursos" id="recursos-link">RECURSOS</a>
+          <ul class="submenu" id="recursos-submenu">
+            <div class="submenu-row">
+              <li><a href="delyser-cloud.html">Delyser Cloud</a></li>
+              <li><a href="campus-delyser.html">Campus Delyser</a></li>
+              <li><a href="canal360.html">Canal 360</a></li>
+            </div>
+          </ul>
+        </li>     
+
+        <li><a href="derecho-1-min.html">DERECHO EN 1 MIN</a></li>
+
+        <li><a href="contacto.html">CONTACTO</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <br><br><br><br><br><br><br><br>
+    <h1 class="fade-in-up delay-4">Campus Delyser</h1>
+    <div class="divider-dot-center fade-in-up delay 4">
+        <div class="dot"></div>
+    </div>
+
+    <br><br><br><br><br>
+    <div class="texto-campus-1 ">
+      <div class="p1 fade-in-left delay-3">
+        <h2>Comienza tu aprendizaje</h2><br>
+        <p>Nam a massa semper, mattis nisl ut, porta sapien. Fusce tincidunt ac libero malesuada mattis. Etiam orci ipsum, auctor a porta sit amet, mollis ac leo.</p>
+        <br>
+        <p>Quisque vitae orci sed dolor pellentesque varius. Nam eleifend lorem eu metus luctus, ac auctor justo ultricies. Quisque dapibus lectus dui, in ornare neque finibus nec. Curabitur auctor lobortis tincidunt. </p>
+        <br>
+        <p>Donec eu facilisis turpis. Vestibulum id diam dapibus, blandit sapien nec, fermentum odio. Nam ultricies congue tempus.</p>
+      </div>
+              <!-- CONTENEDOR PRINCIPAL -->
+        <div class="login-container fade-in-right delay-3">
+          
+          <!-- HEADER -->
+          <div class="login-header">
+            <h1 class="login-title">Inicio de Sesión</h1>
+            <p class="login-subtitle">Acceso al portal de documentos</p>
+          </div>
+
+          <!-- FORMULARIO -->
+          <form class="login-form" id="loginForm">
+            
+            <!-- NOMBRE DE USUARIO -->
+            <div class="form-group">
+              <label for="username" class="form-label">Nombre de usuario</label>
+              <input 
+                type="text" 
+                id="username" 
+                name="username" 
+                class="form-input" 
+                placeholder="Ingrese su nombre de usuario"
+                required
+              >
+            </div>
+
+            <!-- CONTRASEÑA -->
+            <div class="form-group">
+              <label for="password" class="form-label">Contraseña</label>
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                class="form-input" 
+                placeholder="Ingrese su contraseña"
+                required
+              >
+            </div>
+
+            <!-- RECORDAR USUARIO -->
+            <div class="checkbox-group">
+              <input 
+                type="checkbox" 
+                id="remember" 
+                name="remember" 
+                class="form-checkbox"
+              >
+              <label for="remember" class="checkbox-label">
+                Recordar nombre de usuario
+              </label>
+            </div>
+
+            <!-- BOTÓN ACCEDER -->
+            <button type="submit" class="form-button btn-primary">
+              <i class="ph ph-sign-in"></i>
+              Acceder
+            </button>
+
+            <!-- ENLACE OLVIDÓ CONTRASEÑA -->
+            <a href="#" class="form-link">
+              ¿Olvidó su nombre de usuario o contraseña?
+            </a>
+
+          </form>
+
+          <!-- INFORMACIÓN ADICIONAL -->
+          <div class="info-message">
+            <div class="info-title">Información importante:</div>
+            Las 'Cookies' deben estar habilitadas en su navegador<br>
+            Algunos cursos permiten el acceso de invitados
+          </div>
+
+          <!-- SEPARADOR -->
+          <div class="divider">
+            <span>o</span>
+          </div>
+
+          <!-- BOTÓN INVITADO -->
+          <button type="button" class="form-button btn-secondary" onclick="guestLogin()">
+            <i class="ph ph-user-circle"></i>
+            Entrar como invitado
+          </button>
+        </div>
+      </div>
+
+    
+    
+    <br><br><br><br><br>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h4>DELYSER ABOGADOS S.L.P.</h4>
+        <p>C/Doctor Fleming 30, 1ºD 28036 Madrid</p>
+        <div class="footer-contact">
+          <p>T: (+34) 91 541 01 47</p>
+          <p>F: (+34) 91 542 66 98</p>
+          <p>delyser@delyser.com</p>
+        </div>
+      </div>
+      
+      <div class="footer-logo">
+        <img src="img/img-index/logo-blanco.png" alt="Delyser Abogados Logo">
+      </div>
+
+      <div class="footer-social">
+        <a href="#" class="social-icon instagram" title="Instagram">
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+        <a href="#" class="social-icon twitter" title="Twitter/X">
+          <i class="ph ph-x-logo"></i>
+        </a>
+        <a href="#" class="social-icon linkedin" title="LinkedIn">
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+        <a href="#" class="social-icon facebook" title="Facebook">
+          <i class="ph ph-facebook-logo"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+<button class="scroll-to-top" title="Volver arriba"></button>
+
+<script src="js/btn-scroll.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/scroll-animations2.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/submenu.js"></script>
+<script src="js/smooth-scroll.js"></script>
+
+</body>
+</html>

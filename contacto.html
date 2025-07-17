@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derecho en 1 Minuto - Delyser Abogados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/contacto.css"> 
+</head>
+<body>
+
+  <!-- Contenedor de formas geométricas de fondo -->
+  <div class="shapes-container">
+    <div class="triangle triangle-1"></div>
+    <div class="triangle triangle-2"></div>
+    <div class="triangle triangle-3"></div>
+  </div>
+
+    <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="img/img-index/logo-blanco.png" alt="Delyser Abogados Logo">
+      </a>
+      <ul class="nav-links">
+        <!-- Agrega la clase "active" al enlace de la secciÃ³n actual -->
+        <li><a href="index.html" class="active">INICIO</a></li>
+
+        <li class="has-submenu" id="servicios-item">
+          <a href="#servicios" id="servicios-link">SERVICIOS</a>
+          <ul class="submenu" id="servicios-submenu">
+            <!-- Primera fila -->
+            <div class="submenu-section">
+              <h3 class="submenu-title">Áreas de especialización</h3>
+              <div class="submenu-row">
+                <li><a href="servicios/litigios.html">Litigios</a></li>
+                <li><a href="servicios/clinicas.html">Valoración de clínicas</a></li>
+                <li><a href="servicios/compliance.html">Compliance Penal</a></li>
+                <li><a href="servicios/rgpd.html">Contratos tecnológicos y RGPD</a></li>
+                <li><a href="servicios/fusiones.html">Fusiones y Adquisiciones</a></li>
+              </div>
+            </div>
+            <!-- Segunda fila -->
+            <div class="submenu-section">
+              <h3 class="submenu-title">Servicios</h3>
+              <div class="submenu-row">
+                <li><a href="servicios/corporate.html">Corporate</a></li>
+                <li><a href="servicios/urbanismo.html">Urbanismo</a></li>
+                <li><a href="servicios/legal.html">Legal</a></li>
+                <li><a href="servicios/digital.html">Digital</a></li>
+                <li><a href="servicios/dental.html">Dental</a></li>
+                <li><a href="servicios/fiscal.html">Fiscal</a></li>                
+              </div>
+            </div>
+          </ul>
+        </li>
+
+        <li><a href="equipo.html">EQUIPO</a></li>
+
+        <li class="has-submenu" id="recursos-item">
+          <a href="#recursos" id="recursos-link">RECURSOS</a>
+          <ul class="submenu" id="recursos-submenu">
+            <div class="submenu-row">
+              <li><a href="delyser-cloud.html">Delyser Cloud</a></li>
+              <li><a href="campus-delyser.html">Campus Delyser</a></li>
+              <li><a href="canal360.html">Canal 360</a></li>
+            </div>
+          </ul>
+        </li>     
+
+        <li><a href="derecho-1-min.html">DERECHO EN 1 MIN</a></li>
+
+        <li><a href="contacto.html">CONTACTO</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <br><br><br><br><br><br><br><br>
+    <h1 class="fade-in-up delay-4">CONTACTO</h1>
+    <div class="divider-dot-center fade-in-up delay 4">
+        <div class="dot"></div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <div class="text-contact">
+      <div class="p1 fade-in-left delay-3">
+        <h2 >¿Listo para dar el siguiente paso?</h2><br><br>
+        <p> Contacta con nuestro equipo y descubre cómo podemos ayudarte a valorar y potenciar el futuro de tu clínica dental.</p>
+        <br>
+        <p>Rellena el formulario o contactanos directamente por whatsapp.</p>
+      </div>
+      <div class="form-container fade-in-right delay-3">
+        <form id="contactForm">
+              <div class="form-group">
+                  <label class="form-label" for="nombre">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                  <label class="form-label" for="correo">Correo</label>
+                  <input type="email" id="correo" name="correo" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                  <label class="form-label" for="telefono">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                  <label class="form-label" for="motivo">Motivo de consulta</label>
+                  <input type="textarea" id="motivo" name="motivo" class="form-input" required>
+              </div>
+
+              <div class="checkbox-group">
+                  <input type="checkbox" id="privacidad" name="privacidad" class="checkbox-input" required>
+                  <label for="privacidad" class="checkbox-label">
+                      He leído y acepto la <a href="#" class="privacy-link">política de privacidad</a>
+                  </label>
+              </div>
+              <button type="submit" class="submit-btn">ENVIAR</button>
+          </form>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <div class="contact-container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+                <br>
+                <div class="info-section">
+                    <h3>Dirección</h3>
+                    <div class="contact-detail">
+                        <p>Calle Doctor Fleming 50, 1º</p>
+                        <p>28036 Madrid</p>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Teléfono y Fax</h3>
+                    <div class="contact-detail">
+                        <p><strong>T</strong> 91 541 01 47</p>
+                        <p><strong>F</strong> 91 542 66 48</p>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Email</h3>
+                    <p><a href="mailto:deluser@deluser.com" class="email-link">delyser@delyser.com</a></p>
+                </div>
+
+                <div class="social-icons">
+                    <a href="#" class="social-icon instagram" title="Instagram">
+                        <i class="ph ph-instagram-logo"></i>
+                    </a>
+                    <a href="#" class="social-icon twitter" title="X (Twitter)">
+                        <i class="ph ph-x-logo"></i>
+                    </a>
+                    <a href="#" class="social-icon linkedin" title="LinkedIn">
+                        <i class="ph ph-linkedin-logo"></i>
+                    </a>
+                    <a href="#" class="social-icon facebook" title="Facebook">
+                        <i class="ph ph-facebook-logo"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    class="map-frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.0123456789!2d-3.7037902!3d40.4237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDBCsMKwMjUnMjUuMyJOIDPCsDQyJzEzLjYiVw!5e0!3m2!1sen!2ses!4v1234567890"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h4>DELYSER ABOGADOS S.L.P.</h4>
+        <p>C/Doctor Fleming 30, 1ºD 28036 Madrid</p>
+        <div class="footer-contact">
+          <p>T: (+34) 91 541 01 47</p>
+          <p>F: (+34) 91 542 66 98</p>
+          <p>delyser@delyser.com</p>
+        </div>
+      </div>
+      
+      <div class="footer-logo">
+        <img src="img/img-index/logo-blanco.png" alt="Delyser Abogados Logo">
+      </div>
+
+      <div class="footer-social">
+        <a href="#" class="social-icon instagram" title="Instagram">
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+        <a href="#" class="social-icon twitter" title="Twitter/X">
+          <i class="ph ph-x-logo"></i>
+        </a>
+        <a href="#" class="social-icon linkedin" title="LinkedIn">
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+        <a href="#" class="social-icon facebook" title="Facebook">
+          <i class="ph ph-facebook-logo"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-to-top" title="Volver arriba"></button>
+
+  <script src="js/btn-scroll.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/scroll-animations2.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/submenu.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/maps.js"></script>
+
+
+</body>
+</html>

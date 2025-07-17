@@ -1,0 +1,16 @@
+.campus-1 {
+text-align: center; 
+width: 1000px; 
+margin: 0 auto; 
+background: rgba(255, 255, 255, 0.37);
+backdrop-filter: blur(12px);
+padding: 2.5rem;
+border-radius: 20px;
+margin-bottom: 3rem;
+box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
+border: 1px solid rgba(30, 58, 138, 0.1);
+}
+
+.campus-1 img {
+    width: 90%;
+}
