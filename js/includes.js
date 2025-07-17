@@ -1,24 +1,31 @@
 /**
- * Sistema de Includes para Delyser Abogados
- * Carga header y footer dinámicamente
+ * Sistema de Includes MEJORADO para Delyser Abogados
+ * Versión corregida para páginas de servicios
  */
 
 class DelyserlIncludes {
   constructor() {
     this.basePath = this.detectBasePath();
+    console.log('🔍 Ruta base detectada:', this.basePath);
     this.init();
   }
 
   // Detecta la ruta base según la ubicación del archivo
   detectBasePath() {
     const path = window.location.pathname;
-    console.log('📍 Ruta actual:', path);
+    const currentFile = path.split('/').pop() || 'index.html';
+    
+    console.log('📍 Ruta completa:', path);
+    console.log('📄 Archivo actual:', currentFile);
     
     // Si está en una subcarpeta de servicios
-    if (path.includes('/servicios/')) {
+    if (path.includes('/servicios/') || path.indexOf('servicios/') !== -1) {
+      console.log('📁 Detectado: página de servicios');
       return '../';
     }
+    
     // Si está en la raíz
+    console.log('📁 Detectado: página raíz');
     return '';
   }
 
@@ -127,14 +134,18 @@ class DelyserlIncludes {
     const headerContainer = document.querySelector('[data-include="header"]');
     if (headerContainer) {
       headerContainer.innerHTML = this.getHeaderHTML();
-      console.log('✅ Header cargado');
+      console.log('✅ Header cargado correctamente');
+    } else {
+      console.warn('⚠️ No se encontró contenedor para header [data-include="header"]');
     }
 
     // Cargar footer
     const footerContainer = document.querySelector('[data-include="footer"]');
     if (footerContainer) {
       footerContainer.innerHTML = this.getFooterHTML();
-      console.log('✅ Footer cargado');
+      console.log('✅ Footer cargado correctamente');
+    } else {
+      console.warn('⚠️ No se encontró contenedor para footer [data-include="footer"]');
     }
   }
 
@@ -146,75 +157,89 @@ class DelyserlIncludes {
     // Remover .html para comparar
     const currentPage = currentFile.replace('.html', '');
     
-    console.log('📄 Página actual:', currentPage);
+    console.log('🎯 Estableciendo navegación activa para:', currentPage);
 
-    // Encontrar y marcar el enlace activo
-    const links = document.querySelectorAll('[data-page]');
-    links.forEach(link => {
-      const linkPage = link.getAttribute('data-page');
+    // Esperar un poco para que el DOM se cargue
+    setTimeout(() => {
+      // Encontrar y marcar el enlace activo
+      const links = document.querySelectorAll('[data-page]');
+      console.log('🔍 Enlaces encontrados:', links.length);
       
-      // Remover clase active de todos
-      link.classList.remove('active');
-      
-      // Marcar activo si coincide
-      if (linkPage === currentPage || 
-          (currentPage === 'index' && linkPage === 'index')) {
-        link.classList.add('active');
-        console.log('🎯 Marcado como activo:', linkPage);
-      }
-    });
+      links.forEach(link => {
+        const linkPage = link.getAttribute('data-page');
+        
+        // Remover clase active de todos
+        link.classList.remove('active');
+        
+        // Marcar activo si coincide
+        if (linkPage === currentPage || 
+            (currentPage === 'index' && linkPage === 'index')) {
+          link.classList.add('active');
+          console.log('✅ Marcado como activo:', linkPage);
+        }
+      });
+    }, 200);
   }
 
   // Inicializa los submenús
   initSubmenu() {
-    const submenus = [
-      { itemId: "recursos-item", linkId: "recursos-link" },
-      { itemId: "servicios-item", linkId: "servicios-link" }
-    ];
+    console.log('📋 Inicializando submenús...');
+    
+    // Esperar a que el DOM se cargue
+    setTimeout(() => {
+      const submenus = [
+        { itemId: "recursos-item", linkId: "recursos-link" },
+        { itemId: "servicios-item", linkId: "servicios-link" }
+      ];
 
-    submenus.forEach(({ itemId, linkId }) => {
-      const item = document.getElementById(itemId);
-      const link = document.getElementById(linkId);
+      submenus.forEach(({ itemId, linkId }) => {
+        const item = document.getElementById(itemId);
+        const link = document.getElementById(linkId);
 
-      if (item && link) {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
+        if (item && link) {
+          console.log(`✅ Submenú configurado: ${itemId}`);
+          
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
 
-          // Cierra otros submenús
-          submenus.forEach(({ itemId: otherId }) => {
-            if (otherId !== itemId) {
-              const otherItem = document.getElementById(otherId);
-              if (otherItem) otherItem.classList.remove("open");
-            }
+            // Cierra otros submenús
+            submenus.forEach(({ itemId: otherId }) => {
+              if (otherId !== itemId) {
+                const otherItem = document.getElementById(otherId);
+                if (otherItem) otherItem.classList.remove("open");
+              }
+            });
+
+            // Toggle este submenú
+            item.classList.toggle("open");
           });
+        } else {
+          console.warn(`⚠️ No se pudo configurar submenú: ${itemId}`);
+        }
+      });
 
-          // Toggle este submenú
-          item.classList.toggle("open");
-        });
-      }
-    });
+      // Cerrar submenús al hacer clic fuera
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".has-submenu")) {
+          submenus.forEach(({ itemId }) => {
+            const item = document.getElementById(itemId);
+            if (item) item.classList.remove("open");
+          });
+        }
+      });
 
-    // Cerrar submenús al hacer clic fuera
-    document.addEventListener("click", function (e) {
-      if (!e.target.closest(".has-submenu")) {
-        submenus.forEach(({ itemId }) => {
-          const item = document.getElementById(itemId);
-          if (item) item.classList.remove("open");
-        });
-      }
-    });
-
-    console.log('📋 Submenús inicializados');
+      console.log('✅ Submenús inicializados correctamente');
+    }, 300);
   }
 
   // Inicialización principal
   async init() {
     console.log('🚀 Iniciando Delyser Includes...');
     
-    // Cargar includes
+    // Cargar includes inmediatamente
     this.loadIncludes();
     
-    // Esperar un poco para que se cargue el DOM
+    // Configurar navegación y submenús después de cargar
     setTimeout(() => {
       this.setActiveNavigation();
       this.initSubmenu();
@@ -222,16 +247,19 @@ class DelyserlIncludes {
       // Disparar evento personalizado para otros scripts
       document.dispatchEvent(new CustomEvent('includesLoaded'));
       
-      console.log('✅ Delyser Includes completado');
+      console.log('🎉 Delyser Includes completado exitosamente');
     }, 100);
   }
 }
 
 // Inicializar cuando el DOM esté listo
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    window.delyserlIncludes = new DelyserlIncludes();
-  });
-} else {
+function initIncludes() {
+  console.log('🔧 DOM listo - Iniciando sistema de includes...');
   window.delyserlIncludes = new DelyserlIncludes();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initIncludes);
+} else {
+  initIncludes();
 }
