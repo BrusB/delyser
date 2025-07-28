@@ -1,85 +1,82 @@
+/* ================================================
+   DIGITAL - ESTILOS ESPECÍFICOS
+   ================================================ */
+
+/* ===== TRIÁNGULOS DE FONDO ===== */
 .triangle {
-position: absolute;
-width: 0;
-height: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
-/* Triángulo principal - Superior derecha (como elemento de interfaz) */
 .triangle-1 {
-    border-left: 800px solid transparent;
-    border-right: 0px solid transparent;
-    border-bottom: 600px solid #d4d4d4;
-    top: -2%;
-    right: -8%;
-    opacity: 0.7;
-    animation: slowFloat 6s ease-in-out infinite alternate;
-    transform-origin: bottom left;
+  border-left: 800px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 600px solid #d4d4d4;
+  top: -2%;
+  right: -8%;
+  opacity: 0.7;
+  animation: slowFloat 6s ease-in-out infinite alternate;
+  transform-origin: bottom left;
 }
 
-/* Triángulo complementario - Centro izquierda (como elemento de navegación) */
 .triangle-2 {
-    border-top: 700px solid #b7b7b7;
-    border-left: 0px solid transparent;
-    border-right: 900px solid transparent;
-    top: 15%;
-    left: -10%;
-    opacity: 0.6;
-    animation: slowFloat 6s ease-in-out infinite reverse alternate;
-    transform-origin: top right;
+  border-top: 700px solid #b7b7b7;
+  border-left: 0px solid transparent;
+  border-right: 900px solid transparent;
+  top: 15%;
+  left: -10%;
+  opacity: 0.6;
+  animation: slowFloat 6s ease-in-out infinite reverse alternate;
+  transform-origin: top right;
 }
 
-/* Triángulo de conexión - Inferior central (base tecnológica) */
 .triangle-3 {
-    border-top: 450px solid #b8b8b8;
-    border-left: 600px solid transparent;
-    border-right: 600px solid transparent;
-    bottom: -5%;
-    left: 20%;
-    transform: translateX(-50%) rotate(8deg);
-    opacity: 0.4;
-    animation: subtleRotate 8s linear infinite alternate;
-    transform-origin: center top;
+  border-top: 450px solid #b8b8b8;
+  border-left: 600px solid transparent;
+  border-right: 600px solid transparent;
+  bottom: -5%;
+  left: 20%;
+  transform: translateX(-50%) rotate(8deg);
+  opacity: 0.4;
+  animation: subtleRotate 8s linear infinite alternate;
+  transform-origin: center top;
 }
 
-/* Triángulo con imagen - Desplazado dinámicamente */
 .triangle-4 {
-left: 10%;
-top: 15%;
+  left: 10%;
+  top: 15%;
 }
 
 .triangle-4 img {
-width: 1200px;
-animation: subtleRotate 5s linear infinite alternate;
-transform-origin: 50% 100%;
+  width: 1200px;
+  animation: subtleRotate 5s linear infinite alternate;
+  transform-origin: 50% 100%;
 }
 
-
-/* Animaciones más sutiles */
+/* ===== ANIMACIONES ===== */
 @keyframes slowFloat {
-0%, 100% {
-transform: translateY(0px) translateX(0px);
-}
-50% {
-transform: translateY(-15px) translateX(10px);
-}
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-15px) translateX(10px);
+  }
 }
 
 @keyframes subtleRotate {
-0% {
-transform: rotate(0deg);
-}
-100% {
-transform: rotate(3deg);
-}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
 }
 
-
-
-.p1{
-    text-align: center; 
-    width: 1000px; 
-    margin: 0 auto; 
-      background: rgba(255, 255, 255, 0.493);
+/* ===== ESTILOS BASE COMUNES ===== */
+.p1,
+.texto-dig-1 {
+  background: rgba(255, 255, 255, 0.493);
   backdrop-filter: blur(12px);
   padding: 2.5rem;
   border-radius: 20px;
@@ -88,31 +85,93 @@ transform: rotate(3deg);
   border: 1px solid rgba(30, 58, 138, 0.1);
 }
 
+/* ===== CONTENEDORES ESPECÍFICOS ===== */
+.p1 {
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+}
 
 .texto-dig-1 {
-max-width: 1200px; /* Ancho máximo del contenedor */
-margin: 0 auto; /* Centrar horizontalmente */
-display: flex;
-justify-content: space-between;
-align-items: center top;
-padding: 2rem 3rem; /* Márgenes internos generosos */
-gap: 4rem; /* Espacio entre texto e imagen */
-text-align: justify ;
-      background: rgba(255, 255, 255, 0.493);
-backdrop-filter: blur(12px);
-padding: 2.5rem;
-border-radius: 20px;
-margin-bottom: 3rem;
-box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
-border: 1px solid rgba(30, 58, 138, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  text-align: justify;
 }
 
 .texto-dig-1 .p2 {
-    width: 50%;
+  width: 50%;
 }
 
 .texto-dig-1 .p3 {
-    text-align: center;
-    width: 50%;
+  text-align: center;
+  width: 50%;
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .p1 {
+    width: 90%;
+    max-width: 900px;
+  }
+
+  .texto-dig-1 {
+    max-width: 95%;
+    gap: 3rem;
+  }
+
+  .triangle-4 img {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .p1,
+  .texto-dig-1 {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .p1 {
+    width: 95%;
+  }
+
+  .texto-dig-1 {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .texto-dig-1 .p2,
+  .texto-dig-1 .p3 {
+    width: 100%;
+  }
+
+  .texto-dig-1 .p2 {
+    text-align: center; /* Centrar texto en móviles para mejor legibilidad */
+  }
+
+  .triangle-4 img {
+    width: 800px;
+  }
+}
+
+@media (max-width: 480px) {
+  .p1,
+  .texto-dig-1 {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .triangle-4 img {
+    width: 600px;
+  }
+
+  /* Optimización para móviles muy pequeños */
+  .triangle-4 {
+    display: none;
+  }
+}

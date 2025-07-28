@@ -1,209 +1,235 @@
+/* ================================================
+   LEGAL - ESTILOS ESPECÍFICOS
+   ================================================ */
+
+/* ===== TRIÁNGULOS DE FONDO ===== */
 .triangle {
-position: absolute;
-width: 0;
-height: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 .triangle-1 {
-border-left: 0px solid transparent;
-border-right: 1200px solid transparent;
-border-top: 950px solid #d4d4d4;
-/*  border-bottom: 750px solid #2c3e50;  Azul corporativo */
-top: 0;
-left: -3%;
-opacity: 0.7;
-animation: slowFloat 6s ease-in-out infinite alternate;
-transform-origin: bottom right;
+  border-left: 0px solid transparent;
+  border-right: 1200px solid transparent;
+  border-top: 950px solid #d4d4d4;
+  top: 0;
+  left: -3%;
+  opacity: 0.7;
+  animation: slowFloat 6s ease-in-out infinite alternate;
+  transform-origin: bottom right;
 }
 
-/* Triángulo complementario - Derecha inferior (Empresa B) */
 .triangle-2 {
-/*  border-top: 650px solid #34495e;  Azul más oscuro */
-border-top: 850px solid #b7b7b7;
-border-left: 1200px solid transparent;
-border-right: 0px solid transparent;
-top: -5%;
-right: -5%;
-opacity: 0.6;
-animation: slowFloat 6s ease-in-out infinite reverse alternate;
-transform-origin: top left;
+  border-top: 850px solid #b7b7b7;
+  border-left: 1200px solid transparent;
+  border-right: 0px solid transparent;
+  top: -5%;
+  right: -5%;
+  opacity: 0.6;
+  animation: slowFloat 6s ease-in-out infinite reverse alternate;
+  transform-origin: top left;
 }
 
-/* Triángulo de conexión - Centro (La fusión) */
 .triangle-3 {
-border-bottom: 450px solid #b8b8b8;
-border-left: 100px solid transparent;
-border-right: 700px solid transparent;
-top: 35%;
-left: 30%;
-opacity: 0.4;
-animation: subtleRotate 8s linear infinite alternate;
-transform-origin: center bottom;
-transform: rotate(-12deg);
+  border-bottom: 450px solid #b8b8b8;
+  border-left: 100px solid transparent;
+  border-right: 700px solid transparent;
+  top: 35%;
+  left: 30%;
+  opacity: 0.4;
+  animation: subtleRotate 8s linear infinite alternate;
+  transform-origin: center bottom;
+  transform: rotate(-12deg);
 }
 
 .triangle-4 {
-left: 10%;
-top: 15%;
+  left: 10%;
+  top: 15%;
 }
-
 
 .triangle-4 img {
-width: 1200px;
-animation: subtleRotate 5s linear infinite alternate;
-transform-origin: 50% 100%;
+  width: 1200px;
+  animation: subtleRotate 5s linear infinite alternate;
+  transform-origin: 50% 100%;
 }
 
-
-/* Animaciones más sutiles */
+/* ===== ANIMACIONES ===== */
 @keyframes slowFloat {
-0%, 100% {
-transform: translateY(0px) translateX(0px);
-}
-50% {
-transform: translateY(-15px) translateX(10px);
-}
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-15px) translateX(10px);
+  }
 }
 
 @keyframes subtleRotate {
-0% {
-transform: rotate(0deg);
-}
-100% {
-transform: rotate(3deg);
-}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
 }
 
-
-.p1{
-text-align: center; 
-width: 1000px; 
-margin: 0 auto; 
-      background: rgba(255, 255, 255, 0.493);
-backdrop-filter: blur(12px);
-padding: 2.5rem;
-border-radius: 20px;
-margin-bottom: 3rem;
-box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
-border: 1px solid rgba(30, 58, 138, 0.1);
+/* ===== CONTENEDORES BÁSICOS ===== */
+.p1 {
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.493);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
+  border: 1px solid rgba(30, 58, 138, 0.1);
 }
 
 .p3 {
-max-width: 1200px; /* Ancho máximo del contenedor */
-margin: 0 auto; /* Centrar horizontalmente */
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 2rem 3rem; /* Márgenes internos generosos */
-gap: 4rem; /* Espacio entre texto e imagen */
-      background: rgba(255, 255, 255, 0.493);
-backdrop-filter: blur(12px);
-padding: 2.5rem;
-border-radius: 20px;
-margin-bottom: 3rem;
-box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
-border: 1px solid rgba(30, 58, 138, 0.1);
+  text-align: center;
+  width: fit-content;
+  max-width: 1100px;
+  min-width: 400px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.493);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "left right";
+  gap: 2rem;
+  align-items: start;
 }
 
-.p3 p {
-text-align: center;
-
+.p3 h2 {
+  grid-area: title;
+  margin-bottom: 1rem;
+  text-align: center;
 }
+
+.p3 > div:nth-of-type(1) {
+  grid-area: left;
+  text-align: left;
+}
+
+.p3 > div:nth-of-type(2) {
+  grid-area: right;
+  text-align: left;
+}
+
+/* ===== SISTEMA DE TARJETAS DESPLEGABLES ===== */
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  padding: 0 1rem;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .texto-leg-1 {
-display: flex;
-flex-direction: column;
-align-self: start; /* Cada tarjeta es independiente */
-min-height: auto;
-width: 100%; 
-      background: rgba(255, 255, 255, 0.493);
-backdrop-filter: blur(12px);
-padding: 2.5rem;
-border-radius: 20px;
-box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
-border: 1px solid rgba(30, 58, 138, 0.1);
-cursor: pointer;
-transition: all 0.3s ease;
-overflow: hidden;
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  min-height: auto;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.493);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .texto-leg-1:hover {
-transform: translateY(-5px);
-box-shadow: 0 20px 45px rgba(30, 58, 138, 0.2);
-      background: rgba(255, 255, 255, 0.658);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(30, 58, 138, 0.2);
+  background: rgba(255, 255, 255, 0.658);
 }
 
-.cards-container {
-max-width: 1200px;
-margin: 0 auto;
-display: flex; /* Cambio de grid a flex */
-gap: 2rem;
-padding: 0 1rem;
-align-items: flex-start; /* Alinear al inicio */
+.texto-leg-1.active {
+  background: rgba(255, 255, 255, 0.493);
 }
 
-/* COLUMNAS INDEPENDIENTES */
-.column {
-flex: 1; /* Cada columna ocupa la mitad */
-display: flex;
-flex-direction: column;
-gap: 2rem; /* Espaciado entre tarjetas en la misma columna */
-}
-
-/* HEADER DE TARJETA */
+/* ===== HEADER DE TARJETA ===== */
 .card-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-cursor: pointer;
-user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
 }
 
 .cards-container h3 {
-font-size: 22px;
-font-family: 'DM Serif Display';
-font-weight: 400;
+  font-size: 22px;
+  font-family: 'DM Serif Display';
+  font-weight: 400;
 }
 
 .card-icon {
-font-size: 1.5rem;
-color: #f6c90e;
-transition: transform 0.3s ease;
-margin-left: 1rem;
+  font-size: 1.5rem;
+  color: #f6c90e;
+  transition: transform 0.3s ease;
+  margin-left: 1rem;
 }
 
-/* CONTENIDO DESPLEGABLE */
+.texto-leg-1.active .card-icon {
+  transform: rotate(180deg);
+}
+
+/* ===== CONTENIDO DESPLEGABLE ===== */
 .card-content {
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
-padding: 0;
-margin: 0;
-opacity: 0;
-transform: translateY(-10px);
-transition: all 0.4s ease;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
 }
 
 .card-content.expanded {
-max-height: 500px;
-padding-top: 1.5rem;
-margin-top: 0;
-opacity: 1;
-transform: translateY(0);
+  max-height: 500px;
+  padding-top: 1.5rem;
+  margin-top: 0;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card-content p {
-margin-bottom: 1rem;
-line-height: 1.8;
-color: #374151;
-opacity: 0;
-transform: translateY(10px);
-transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: #374151;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
 }
 
 .card-content.expanded p {
-opacity: 1;
-transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Delay escalonado para párrafos */
@@ -212,85 +238,102 @@ transform: translateY(0);
 .card-content.expanded p:nth-child(3) { transition-delay: 0.3s; }
 .card-content.expanded p:nth-child(4) { transition-delay: 0.4s; }
 
-/* ESTADOS ACTIVOS */
-.texto-leg-1.active .card-icon {
-transform: rotate(180deg);
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .p1 {
+    width: 90%;
+    max-width: 900px;
+  }
+
+  .p3 {
+    max-width: 950px;
+  }
+
+  .triangle-4 img {
+    width: 1000px;
+  }
 }
 
-.texto-leg-1.active {
-      background: rgba(255, 255, 255, 0.493);
-}
-
-/* SECCIÓN FINAL */
-.final-section {
-text-align: center;
-margin: 4rem auto;
-}
-
-.final-section h2 {
-font-family: 'DM Serif Display', serif;
-font-size: 2.5rem;
-color: #4c1d95;
-margin-bottom: 3rem;
-}
-
-.p3 {
-    text-align: center;
-    width: fit-content;
-    max-width: 1100px;
-    min-width: 400px;
-    margin: 0 auto;
-      background: rgba(255, 255, 255, 0.493);
-    backdrop-filter: blur(12px);
-    padding: 2.5rem;
-    border-radius: 20px;
-    margin-bottom: 3rem;
-    box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
-    border: 1px solid rgba(30, 58, 138, 0.1);
-    
-    /* Grid para organizar h2 arriba y divs abajo */
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-    grid-template-areas:
-        "title title"    /* h2 ocupa ambas columnas */
-        "left right";    /* divs uno en cada columna */
-    gap: 2rem;
-    align-items: start;
-}
-
-.p3 h2 {
-    grid-area: title;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-/* Primer div - columna izquierda */
-.p3 > div:nth-of-type(1) {
-    grid-area: left;
-    text-align: left; /* Alinear texto a la izquierda para mejor legibilidad */
-}
-
-/* Segundo div - columna derecha */
-.p3 > div:nth-of-type(2) {
-    grid-area: right;
-    text-align: left; /* Alinear texto a la izquierda para mejor legibilidad */
-}
-
-/* Responsive: En móviles cambiar a una sola columna */
 @media (max-width: 768px) {
-    .p3 {
-        grid-template-columns: 1fr; /* Una sola columna */
-        grid-template-areas:
-            "title"
-            "left"
-            "right";
-        min-width: 280px;
-        max-width: 90vw;
-        padding: 1.5rem;
-    }
-    
-    .p3 > div:nth-of-type(1),
-    .p3 > div:nth-of-type(2) {
-        text-align: center; /* Centrar en móviles */
-    }
+  .p1,
+  .p3 {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .p1 {
+    width: 95%;
+  }
+
+  .p3 {
+    min-width: auto;
+    width: 95%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "left"
+      "right";
+  }
+
+  .p3 > div:nth-of-type(1),
+  .p3 > div:nth-of-type(2) {
+    text-align: center;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .column {
+    gap: 1.5rem;
+  }
+
+  .texto-leg-1 {
+    padding: 2rem;
+  }
+
+  .cards-container h3 {
+    font-size: 20px;
+  }
+
+  .triangle-4 img {
+    width: 800px;
+  }
+}
+
+@media (max-width: 480px) {
+  .p1,
+  .p3 {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .texto-leg-1 {
+    padding: 1.5rem;
+  }
+
+  .cards-container h3 {
+    font-size: 18px;
+  }
+
+  .card-icon {
+    font-size: 1.3rem;
+  }
+
+  .triangle-4 img {
+    width: 600px;
+  }
+
+  /* Optimización para móviles muy pequeños */
+  .triangle-4 {
+    display: none;
+  }
+}
+
+/* ===== ANIMACIONES DE ENTRADA ===== */
+/* Se mantienen para compatibilidad con JavaScript externo */
+.texto-leg-1 {
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }

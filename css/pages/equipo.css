@@ -1,276 +1,471 @@
+/* ===========================================
+   EQUIPO.CSS OPTIMIZADO
+   =========================================== */
+
+/* ===========================================
+   TRIÁNGULOS DE FONDO ESPECÍFICOS
+   =========================================== */
 .triangle {
-position: absolute;
-width: 0;
-height: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 .triangle-1 {
-    border-left: 0px solid transparent;
-    border-right: 1200px solid transparent;
-    border-bottom: 950px solid #d4d4d4;
-  /*  border-bottom: 750px solid #2c3e50;  Azul corporativo */
-    top: 0;
-    left: -3%;
-    opacity: 0.7;
-    animation: slowFloat 6s ease-in-out infinite alternate;
-    transform-origin: bottom right;
+  border-left: 0px solid transparent;
+  border-right: 1200px solid transparent;
+  border-bottom: 950px solid #d4d4d4;
+  top: 0;
+  left: -3%;
+  opacity: 0.7;
+  animation: slowFloat 6s ease-in-out infinite alternate;
+  transform-origin: bottom right;
 }
 
-/* Triángulo complementario - Derecha inferior (Empresa B) */
 .triangle-2 {
-  /*  border-top: 650px solid #34495e;  Azul más oscuro */
-    border-bottom: 850px solid #b7b7b7;
-    border-left: 1200px solid transparent;
-    border-right: 0px solid transparent;
-    top: -5%;
-    right: -5%;
-    opacity: 0.6;
-    animation: slowFloat 6s ease-in-out infinite reverse alternate;
-    transform-origin: top left;
+  border-bottom: 850px solid #b7b7b7;
+  border-left: 1200px solid transparent;
+  border-right: 0px solid transparent;
+  top: -5%;
+  right: -5%;
+  opacity: 0.6;
+  animation: slowFloat 6s ease-in-out infinite reverse alternate;
+  transform-origin: top left;
 }
 
-/* Triángulo de conexión - Centro (La fusión) */
 .triangle-3 {
-    border-bottom: 400px solid #b8b8b8;
-    border-left: 0px solid transparent;
-    border-right: 500px solid transparent;
-    top: 25%;
-    left: 20%;
-    opacity: 0.4;
-    animation: subtleRotate 8s linear infinite alternate;
-    transform-origin: center bottom;
-    transform: rotate(-12deg);
+  border-bottom: 400px solid #b8b8b8;
+  border-left: 0px solid transparent;
+  border-right: 500px solid transparent;
+  top: 25%;
+  left: 20%;
+  opacity: 0.4;
+  animation: subtleRotate 8s linear infinite alternate;
+  transform-origin: center bottom;
+  transform: rotate(-12deg);
 }
 
 .triangle-4 {
-left: 10%;
-top: 15%;
+  left: 10%;
+  top: 15%;
 }
-
 
 .triangle-4 img {
-width: 1200px;
-animation: subtleRotate 5s linear infinite alternate;
-transform-origin: 50% 100%;
+  width: 1200px;
+  animation: subtleRotate 5s linear infinite alternate;
+  transform-origin: 50% 100%;
 }
 
-
-/* Animaciones más sutiles */
+/* Animaciones específicas */
 @keyframes slowFloat {
-0%, 100% {
-transform: translateY(0px) translateX(0px);
-}
-50% {
-transform: translateY(-15px) translateX(10px);
-}
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-15px) translateX(10px);
+  }
 }
 
 @keyframes subtleRotate {
-0% {
-transform: rotate(0deg);
-}
-100% {
-transform: rotate(3deg);
-}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
 }
 
-
-
+/* ===========================================
+   OVERRIDE ESPECÍFICO PARA SEPARADOR
+   =========================================== */
 .divider-dot-center::before,
 .divider-dot-center::after {
-    content: '';
-    flex: 1;
-    height: 2px;
-    background: #ffffff;
-    opacity: 0;
-    transition: opacity 1s ease-out, transform 0.5s ease-out;
-    transform: scaleX(0);
-}    
-    
-    /* Título de sección */
-    .socios-title {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 72px;
-      font-weight: 300;
-      text-align: center;
-      color: #f6c90e;
-      margin: 3rem 0 2rem;
-      text-transform: uppercase;
-      /* letter-spacing: 2px; */
-    }
+  background: #ffffff;
+}
 
-    /* Sección de socios */
-    .socios-section {
-      background-color: #1a1a1acc;
-      padding: 5rem 0 4rem;
-    }
+/* ===========================================
+   TÍTULOS DE SECCIÓN
+   =========================================== */
+.socios-title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h1);
+  font-weight: 300;
+  text-align: center;
+  color: var(--color-primary);
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+  text-transform: uppercase;
+}
 
-    /* Sección de personal profesional */
-    .personal-section {
-      background-color: #2d3748c7;
-      padding: 3rem 0 4rem;
-    }
+/* ===========================================
+   SECCIONES PRINCIPALES
+   =========================================== */
+.socios-section {
+  background-color: rgba(26, 26, 26, 0.8);
+  padding: 5rem 0 var(--spacing-xl);
+}
 
-    .personal-section .section-title {
-      color: #f6c90e;
-    }
+.personal-section {
+  background-color: rgba(45, 55, 72, 0.78);
+  padding: var(--spacing-lg) 0 var(--spacing-xl);
+}
 
-    /* Contenedor de tarjetas */
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 2rem;
-      row-gap: 5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
+.personal-section .section-title {
+  color: var(--color-primary);
+}
 
-    /* Tarjeta individual */
-    .team-card {
-      background: transparent;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
+/* ===========================================
+   GRID Y TARJETAS DEL EQUIPO
+   =========================================== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: var(--spacing-md);
+  row-gap: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
 
-    .team-card:hover {
-      transform: translateY(-5px);
-    }
+.team-card {
+  background: transparent;
+  text-align: center;
+  transition: transform var(--transition-fast);
+}
 
-    /* Foto del miembro */
-    .member-photo {
-      width: 100%;
-      aspect-ratio: 0.85;
-      height: 250px; /* Altura fija más baja para que las fotos sobresalgan */
-      background-color: #e5e5e5;
-      margin-bottom: 1.5rem;
-      overflow: visible; /* Permitir que la imagen sobresalga */
-      position: relative;
-    }
+.team-card:hover {
+  transform: translateY(-5px);
+}
 
-    .member-photo img {
-      width: 270px;
-      /* height: 350px; */
-      object-fit: cover;
-      object-position: center bottom; /* Posicionar desde abajo para que la cabeza sobresalga */
-      transition: transform 0.3s ease;
-      position: absolute;
-      bottom: 0; /* Alinear con la parte inferior del contenedor */
-      left: 50%; /* Centrar horizontalmente */
-      transform: translateX(-50%); /* Centrado perfecto */
-    }
+/* ===========================================
+   FOTOGRAFÍAS DE MIEMBROS
+   =========================================== */
+.member-photo {
+  width: 100%;
+  aspect-ratio: 0.85;
+  height: 250px;
+  background-color: #e5e5e5;
+  margin-bottom: 1.5rem;
+  overflow: visible;
+  position: relative;
+}
 
-    .team-card:hover .member-photo img {
-      transform: translateX(-50%) scale(1.05); /* Mantener centrado en hover */
-      transform-origin: center bottom;
-    }
+.member-photo img {
+  width: 270px;
+  object-fit: cover;
+  object-position: center bottom;
+  transition: transform var(--transition-fast);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
+.team-card:hover .member-photo img {
+  transform: translateX(-50%) scale(1.05);
+  transform-origin: center bottom;
+}
 
+.photo-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  font-size: 0.9rem;
+  font-family: var(--font-primary);
+}
 
-    /* Placeholder para fotos */
-    .photo-placeholder {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #999;
-      font-size: 0.9rem;
-      font-family: 'Quicksand', sans-serif;
-    }
+/* ===========================================
+   INFORMACIÓN DE MIEMBROS
+   =========================================== */
+.member-name {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-    /* Nombre del miembro */
-    .member-name {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #f6c90e;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+.member-position {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
 
-    /* Posición del miembro */
-    .member-position {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 400;
-      color: #cccccc;
-      margin-bottom: 1.5rem;
-      line-height: 1.4;
-    }
+/* ===========================================
+   BOTÓN DE INFORMACIÓN
+   =========================================== */
+.info-btn {
+  background: none;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
 
-    /* Botón de información */
-    .info-btn {
-      background: none;
-      border: 1px solid #f6c90e;
-      color: #f6c90e;
-      padding: 0.5rem 1.5rem;
-      font-family: 'Quicksand', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+.info-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-navbar);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
 
-    .info-btn:hover {
-      background-color: #f6c90e;
-      color: #1a1a1a;
-    }
+.info-btn:active {
+  transform: translateY(0);
+}
 
-    /* Detalles expandibles */
-    .team-details {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.4s ease;
-      margin-top: 1rem;
-    }
+/* ===========================================
+   DETALLES EXPANDIBLES
+   =========================================== */
+.team-details {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
 
-    .team-details.active {
-      padding: 1.5rem;
-      max-height: 400px;
-    }
+.team-details.active {
+  padding: 1.5rem;
+  max-height: 400px;
+}
 
-    .team-details h4 {
-      font-family: 'Quicksand', sans-serif;
-      color: #f6c90e;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-      text-align: left;
-      font-weight: 600;
-    }
+.team-details h4 {
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
 
-    .team-details p {
-      font-family: 'Quicksand', sans-serif;
-      color: #cccccc;
-      font-size: 0.85rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      text-align: left;
-    }
+.team-details p {
+  font-family: var(--font-primary);
+  color: #cccccc;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: left;
+}
 
-    .team-details ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1rem;
-    }
+.team-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
 
-    .team-details li {
-      font-family: 'Quicksand', sans-serif;
-      color: #cccccc;
-      font-size: 0.85rem;
-      margin-bottom: 0.3rem;
-      position: relative;
-      padding-left: 1rem;
-      text-align: left;
-    }
+.team-details li {
+  font-family: var(--font-primary);
+  color: #cccccc;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  position: relative;
+  padding-left: 1rem;
+  text-align: left;
+  line-height: 1.5;
+}
 
-    .team-details li::before {
-      content: '•';
-      color: #f6c90e;
-      position: absolute;
-      left: 0;
-    }
+.team-details li::before {
+  content: '•';
+  color: var(--color-primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* ===========================================
+   ANIMACIONES DE ENTRADA
+   =========================================== */
+.team-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInTeamCard 0.6s ease-out forwards;
+}
+
+@keyframes fadeInTeamCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delays escalonados para las tarjetas */
+.team-card:nth-child(1) { animation-delay: 0.1s; }
+.team-card:nth-child(2) { animation-delay: 0.2s; }
+.team-card:nth-child(3) { animation-delay: 0.3s; }
+.team-card:nth-child(4) { animation-delay: 0.4s; }
+.team-card:nth-child(5) { animation-delay: 0.5s; }
+.team-card:nth-child(6) { animation-delay: 0.6s; }
+.team-card:nth-child(7) { animation-delay: 0.7s; }
+.team-card:nth-child(8) { animation-delay: 0.8s; }
+.team-card:nth-child(9) { animation-delay: 0.9s; }
+
+/* Para las filas siguientes */
+.team-card:nth-child(n+10) { animation-delay: 1s; }
+
+/* ===========================================
+   RESPONSIVE DESIGN
+   =========================================== */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    row-gap: var(--spacing-xl);
+  }
+
+  .socios-title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    margin: var(--spacing-md) 0;
+  }
+
+  .member-photo img {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .socios-section,
+  .personal-section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    row-gap: var(--spacing-lg);
+    padding: 0 1rem;
+  }
+
+  .socios-title {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin: var(--spacing-md) 0 var(--spacing-sm);
+  }
+
+  .member-photo {
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .member-photo img {
+    width: 200px;
+  }
+
+  .member-name {
+    font-size: 1.1rem;
+  }
+
+  .member-position {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .team-details.active {
+    padding: 1rem;
+  }
+
+  .team-details h4 {
+    font-size: 0.95rem;
+  }
+
+  .team-details p,
+  .team-details li {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    padding: 0 0.5rem;
+  }
+
+  .socios-title {
+    font-size: clamp(1.8rem, 10vw, 2.2rem);
+  }
+
+  .member-photo {
+    height: 180px;
+  }
+
+  .member-photo img {
+    width: 180px;
+  }
+
+  .member-name {
+    font-size: 1rem;
+  }
+
+  .member-position {
+    font-size: 0.85rem;
+  }
+
+  .info-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .team-details.active {
+    padding: 0.8rem;
+    max-height: 350px;
+  }
+}
+
+/* ===========================================
+   OPTIMIZACIONES DE RENDIMIENTO
+   =========================================== */
+@media (hover: none) and (pointer: coarse) {
+  .team-card:hover {
+    transform: none;
+  }
+  
+  .team-card:hover .member-photo img {
+    transform: translateX(-50%);
+  }
+  
+  .info-btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* Optimizaciones para pantallas de alta resolución */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .member-photo img,
+  .triangle-4 img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Reducir animaciones para usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .team-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .triangle-1,
+  .triangle-2,
+  .triangle-3,
+  .triangle-4 img {
+    animation: none;
+  }
+}
