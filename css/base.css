@@ -414,11 +414,9 @@ main {
   gap: 0.5rem;
 }
 
-.footer-info h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--color-primary);
+.footer-info h4 {
+  text-align: left;
+  margin: 0; 
 }
 
 .footer-info p {
@@ -461,10 +459,10 @@ main {
   transition: opacity var(--transition-medium), transform var(--transition-medium), box-shadow var(--transition-fast);
 }
 
-.social-icon:hover {
+/* .social-icon:hover {
   transform: translateY(-3px) scale(1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.548);
+} */
 
 /* Animaciones escalonadas para iconos sociales */
 .footer.animate .social-icon:nth-child(1) { 
@@ -487,6 +485,11 @@ main {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+.footer.animate .social-icon:nth-child(5) { 
+  transition-delay: 1.2s;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
 
 /* Colores de redes sociales */
 .social-icon.instagram {
@@ -503,6 +506,10 @@ main {
 
 .social-icon.facebook {
   background-color: #1877f2;
+}
+
+.social-icon.whatsapp {
+  background-color: #25D366;
 }
 
 /* ===========================================

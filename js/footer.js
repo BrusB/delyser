@@ -1,4 +1,4 @@
-    // Animación del footer al hacer scroll (bidireccional)
+    // AnimaciÃ³n del footer al hacer scroll (bidireccional)
     const footer = document.querySelector('.footer');
     
     const footerObserver = new IntersectionObserver((entries) => {
