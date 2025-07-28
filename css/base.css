@@ -280,6 +280,7 @@ main {
   left: 0;
   width: 100%;
   max-width: 100vw;
+
   background-color: #222831;
   padding: 1.5rem var(--spacing-lg);
   z-index: 15;
@@ -292,6 +293,12 @@ main {
   transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
 }
 
+.navbar .nav-links .submenu li {
+  list-style: none !important;
+  list-style-type: none !important;
+  margin: 0;
+  padding: 0;
+}
 .navbar .nav-links .submenu .submenu-row {
   display: flex;
   justify-content: center;
@@ -315,6 +322,7 @@ main {
   margin: 0;
   padding-bottom: 1rem;
 }
+
 
 .navbar .nav-links .submenu li a {
   color: var(--color-text-light);

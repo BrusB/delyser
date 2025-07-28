@@ -120,8 +120,8 @@ class DelyserlIncludes {
             <a href="#" class="social-icon facebook" title="Facebook">
               <i class="ph ph-facebook-logo"></i>
             </a>
-            <a href="#" class="social-icon whatsapp" title="Whatsapp">
-              <i class="ph ph-whatsapp-logo"></i>
+            <a href="https://wa.me/34681277466?text=Hola,%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20sus%20servicios%20legales." class="social-icon whatsapp" title="WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="ph ph-whatsapp-logo"></i>
             </a>
           </div>
         </div>
