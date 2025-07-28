@@ -1,6 +1,5 @@
 /**
- * Sistema de Includes MEJORADO para Delyser Abogados
- * Versión corregida para páginas de servicios
+ * SOLUCIÓN FAVICON PARA DELYSER - Actualización includes.js
  */
 
 class DelyserlIncludes {
@@ -29,7 +28,54 @@ class DelyserlIncludes {
     return '';
   }
 
-  // Header HTML con rutas dinámicas
+  // ===== NUEVA FUNCIÓN PARA MANEJAR FAVICON =====
+  setupFavicon() {
+    console.log('🎨 Configurando favicon con basePath:', this.basePath);
+    
+    const head = document.head;
+    
+    // Limpiar favicons existentes para evitar duplicados
+    const existingFavicons = head.querySelectorAll('link[rel*="icon"], link[rel="apple-touch-icon"], link[rel="manifest"]');
+    existingFavicons.forEach(link => {
+      console.log('🗑️ Removiendo favicon existente:', link.href);
+      link.remove();
+    });
+    
+    // Definir todos los favicons necesarios
+    const favicons = [
+      { rel: 'icon', type: 'image/x-icon', href: this.basePath + 'favicon.ico' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: this.basePath + 'favicon-16x16.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: this.basePath + 'favicon-32x32.png' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: this.basePath + 'apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', sizes: '192x192', href: this.basePath + 'android-chrome-192x192.png' },
+      { rel: 'icon', type: 'image/png', sizes: '512x512', href: this.basePath + 'android-chrome-512x512.png' },
+      { rel: 'manifest', href: this.basePath + 'site.webmanifest' }
+    ];
+    
+    // Crear y agregar cada elemento link
+    favicons.forEach(faviconData => {
+      const link = document.createElement('link');
+      
+      Object.keys(faviconData).forEach(key => {
+        link.setAttribute(key, faviconData[key]);
+      });
+      
+      head.appendChild(link);
+      console.log('✅ Favicon agregado:', faviconData.href);
+    });
+    
+    // Agregar meta theme-color para móviles
+    const existingThemeColor = head.querySelector('meta[name="theme-color"]');
+    if (!existingThemeColor) {
+      const themeColorMeta = document.createElement('meta');
+      themeColorMeta.name = 'theme-color';
+      themeColorMeta.content = '#f6c90e'; // Color primario de Delyser
+      head.appendChild(themeColorMeta);
+      console.log('🎨 Theme color agregado');
+    }
+  }
+
+  // Header HTML con rutas dinámicas (sin cambios)
   getHeaderHTML() {
     return `
       <header>
@@ -88,7 +134,7 @@ class DelyserlIncludes {
     `;
   }
 
-  // Footer HTML con rutas dinámicas
+  // Footer HTML con rutas dinámicas (sin cambios)
   getFooterHTML() {
     return `
       <footer class="footer">
@@ -152,7 +198,7 @@ class DelyserlIncludes {
     }
   }
 
-  // Establece la navegación activa
+  // Establece la navegación activa (sin cambios)
   setActiveNavigation() {
     const currentPath = window.location.pathname;
     const currentFile = currentPath.split('/').pop() || 'index.html';
@@ -184,7 +230,7 @@ class DelyserlIncludes {
     }, 200);
   }
 
-  // Inicializa los submenús
+  // Inicializa los submenús (sin cambios)
   initSubmenu() {
     console.log('📋 Inicializando submenús...');
     
@@ -235,14 +281,17 @@ class DelyserlIncludes {
     }, 300);
   }
 
-  // Inicialización principal
+  // ===== INICIALIZACIÓN PRINCIPAL MODIFICADA =====
   async init() {
     console.log('🚀 Iniciando Delyser Includes...');
     
-    // Cargar includes inmediatamente
+    // 1. Configurar favicon PRIMERO
+    this.setupFavicon();
+    
+    // 2. Cargar includes
     this.loadIncludes();
     
-    // Configurar navegación y submenús después de cargar
+    // 3. Configurar navegación y submenús después de cargar
     setTimeout(() => {
       this.setActiveNavigation();
       this.initSubmenu();
@@ -255,10 +304,35 @@ class DelyserlIncludes {
   }
 }
 
+// Función para verificar si los archivos del favicon existen
+function checkFaviconFiles() {
+  const basePath = window.location.pathname.includes('/servicios/') ? '../' : '';
+  const faviconFiles = [
+    'favicon.ico',
+    'favicon-16x16.png', 
+    'favicon-32x32.png',
+    'apple-touch-icon.png'
+  ];
+  
+  console.log('🔍 Verificando archivos de favicon...');
+  
+  faviconFiles.forEach(file => {
+    const img = new Image();
+    img.onload = () => console.log('✅', file, 'existe');
+    img.onerror = () => console.error('❌', file, 'NO ENCONTRADO');
+    img.src = basePath + file;
+  });
+}
+
 // Inicializar cuando el DOM esté listo
 function initIncludes() {
   console.log('🔧 DOM listo - Iniciando sistema de includes...');
   window.delyserlIncludes = new DelyserlIncludes();
+  
+  // Verificar archivos de favicon en desarrollo
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    setTimeout(checkFaviconFiles, 1000);
+  }
 }
 
 if (document.readyState === 'loading') {
@@ -266,3 +340,22 @@ if (document.readyState === 'loading') {
 } else {
   initIncludes();
 }
+
+// ===== UTILIDAD PARA FORZAR RECARGA DE FAVICON =====
+window.reloadFavicon = function() {
+  console.log('🔄 Forzando recarga de favicon...');
+  const links = document.querySelectorAll('link[rel*="icon"]');
+  links.forEach(link => {
+    const href = link.href;
+    link.href = href + '?v=' + Date.now();
+  });
+};
+
+// ===== UTILIDAD PARA DEBUG =====
+window.debugFavicon = function() {
+  console.log('🔍 Debug de favicon:');
+  const links = document.querySelectorAll('link[rel*="icon"], link[rel="apple-touch-icon"]');
+  links.forEach((link, index) => {
+    console.log(`${index + 1}. ${link.rel} - ${link.href}`);
+  });
+};
