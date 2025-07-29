@@ -264,7 +264,7 @@
 .play-button i {
   font-size: 36px;
   color: var(--color-navbar);
-  margin-left: 4px; /* Ajuste visual para centrar el triángulo de play */
+  /* margin-left: 2px; Ajuste visual para centrar el triángulo de play */
 }
 
 /* Efecto de pulso en el botón */

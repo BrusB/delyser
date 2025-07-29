@@ -784,14 +784,14 @@ main {
 }
 
 .privacy-link {
-  color: var(--color-primary);
+  color: var(--color-navbar-secondary);
   text-decoration: none;
   font-weight: 600;
   transition: color var(--transition-fast);
 }
 
 .privacy-link:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   text-decoration: underline;
 }
 

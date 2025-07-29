@@ -77,7 +77,7 @@
         videoCard.innerHTML = `
           <div class="video-container">
             <div class="video-placeholder" id="placeholder-${video.id}">
-              <button class="play-button" onclick="playVideo(${video.id})">
+              <button class="play-button" onclick="playVideo(${video.id})" title="play-button">
                 <i class="ph ph-play"></i>
               </button>
             </div>
