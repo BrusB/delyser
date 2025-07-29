@@ -150,7 +150,7 @@ class DelyserlIncludes {
           </div>
           
           <div class="footer-logo">
-            <img src="${this.basePath}img/img-index/logo-blanco.png" alt="Delyser Abogados Logo">
+            <img src="${this.basePath}img/img-index/logo-blanco.webp" alt="Delyser Abogados Logo">
           </div>
 
           <div class="footer-social">
