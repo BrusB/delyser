@@ -154,16 +154,16 @@ class DelyserlIncludes {
           </div>
 
           <div class="footer-social">
-            <a href="https://www.instagram.com/delyserabogados_/" class="social-icon instagram" title="Instagram">
+            <a href="#" class="social-icon instagram" title="Instagram">
               <i class="ph ph-instagram-logo"></i>
             </a>
-            <a href="https://x.com/DELYSERabogados" class="social-icon twitter" title="Twitter/X">
+            <a href="#" class="social-icon twitter" title="Twitter/X">
               <i class="ph ph-x-logo"></i>
             </a>
-            <a href="https://www.linkedin.com/company/delyserabogados/posts/?feedView=all&viewAsMember=true" class="social-icon linkedin" title="LinkedIn">
+            <a href="#" class="social-icon linkedin" title="LinkedIn">
               <i class="ph ph-linkedin-logo"></i>
             </a>
-            <a href="https://www.facebook.com/delyserabogadosslp#" class="social-icon facebook" title="Facebook">
+            <a href="#" class="social-icon facebook" title="Facebook">
               <i class="ph ph-facebook-logo"></i>
             </a>
             <a href="https://wa.me/34681277466?text=Hola,%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20sus%20servicios%20legales." class="social-icon whatsapp" title="WhatsApp" target="_blank" rel="noopener noreferrer">
