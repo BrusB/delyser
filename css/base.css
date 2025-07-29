@@ -92,6 +92,13 @@ h2 {
   text-transform: uppercase;
 }
 
+h3{
+  font-family: var(--font-primary);
+  font-weight: 500;
+    font-size: var(--font-size-base);
+
+}
+
 h4 {
   font-family: var(--font-secondary);
   font-weight: 400;
