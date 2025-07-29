@@ -93,7 +93,7 @@ class DelyserlIncludes {
                   <h3 class="submenu-title">Áreas de especialización</h3>
                   <div class="submenu-row">
                     <li><a href="${this.basePath}servicios/litigios.html" data-page="litigios" title="Ir a Litigios">Litigios</a></li>
-                    <li><a href="${this.basePath}servicios/clinicas.html" data-page="clinicas" title="Ir a Valoración de Clínicas>Valoración de clínicas</a></li>
+                    <li><a href="${this.basePath}servicios/clinicas.html" data-page="clinicas" title="Ir a Valoración de Clínicas">Valoración de clínicas</a></li>
                     <li><a href="${this.basePath}servicios/compliance.html" data-page="compliance" title="Ir a Compliance Penal">Compliance Penal</a></li>
                     <li><a href="${this.basePath}servicios/rgpd.html" data-page="rgpd" title="Ir a Contratos tecnológicos y RGPD">Contratos tecnológicos y RGPD</a></li>
                     <li><a href="${this.basePath}servicios/fusiones.html" data-page="fusiones" title="Ir a Fusiones y Adquisiciones">Fusiones y Adquisiciones</a></li>
