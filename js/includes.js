@@ -84,50 +84,50 @@ class DelyserlIncludes {
             <img src="${this.basePath}img/img-index/logo-blanco.png" alt="Delyser Abogados Logo">
           </a>
           <ul class="nav-links">
-            <li><a href="${this.basePath}index.html" data-page="index">INICIO</a></li>
+            <li><a href="${this.basePath}index.html" data-page="index" title="Ir a Inicio">INICIO</a></li>
 
             <li class="has-submenu" id="servicios-item">
-              <a href="#servicios" id="servicios-link">SERVICIOS</a>
+              <a href="#servicios" id="servicios-link" title="Servicios">SERVICIOS</a>
               <ul class="submenu" id="servicios-submenu">
                 <div class="submenu-section">
                   <h3 class="submenu-title">Áreas de especialización</h3>
                   <div class="submenu-row">
-                    <li><a href="${this.basePath}servicios/litigios.html" data-page="litigios">Litigios</a></li>
-                    <li><a href="${this.basePath}servicios/clinicas.html" data-page="clinicas">Valoración de clínicas</a></li>
-                    <li><a href="${this.basePath}servicios/compliance.html" data-page="compliance">Compliance Penal</a></li>
-                    <li><a href="${this.basePath}servicios/rgpd.html" data-page="rgpd">Contratos tecnológicos y RGPD</a></li>
-                    <li><a href="${this.basePath}servicios/fusiones.html" data-page="fusiones">Fusiones y Adquisiciones</a></li>
+                    <li><a href="${this.basePath}servicios/litigios.html" data-page="litigios" title="Ir a Litigios">Litigios</a></li>
+                    <li><a href="${this.basePath}servicios/clinicas.html" data-page="clinicas" title="Ir a Valoración de Clínicas>Valoración de clínicas</a></li>
+                    <li><a href="${this.basePath}servicios/compliance.html" data-page="compliance" title="Ir a Compliance Penal">Compliance Penal</a></li>
+                    <li><a href="${this.basePath}servicios/rgpd.html" data-page="rgpd" title="Ir a Contratos tecnológicos y RGPD">Contratos tecnológicos y RGPD</a></li>
+                    <li><a href="${this.basePath}servicios/fusiones.html" data-page="fusiones" title="Ir a Fusiones y Adquisiciones">Fusiones y Adquisiciones</a></li>
                   </div>
                 </div>
                 <div class="submenu-section">
                   <h3 class="submenu-title">Servicios</h3>
                   <div class="submenu-row">
-                    <li><a href="${this.basePath}servicios/corporate.html" data-page="corporate">Corporate</a></li>
-                    <li><a href="${this.basePath}servicios/urbanismo.html" data-page="urbanismo">Urbanismo</a></li>
-                    <li><a href="${this.basePath}servicios/legal.html" data-page="legal">Legal</a></li>
-                    <li><a href="${this.basePath}servicios/digital.html" data-page="digital">Digital</a></li>
-                    <li><a href="${this.basePath}servicios/dental.html" data-page="dental">Dental</a></li>
-                    <li><a href="${this.basePath}servicios/fiscal.html" data-page="fiscal">Fiscal</a></li>
+                    <li><a href="${this.basePath}servicios/corporate.html" data-page="corporate" title="Ir a Corporate">Corporate</a></li>
+                    <li><a href="${this.basePath}servicios/urbanismo.html" data-page="urbanismo" title="Ir a Urbanismo">Urbanismo</a></li>
+                    <li><a href="${this.basePath}servicios/legal.html" data-page="legal" title="Ir a Legal">Legal</a></li>
+                    <li><a href="${this.basePath}servicios/digital.html" data-page="digital" title="Ir a Digital">Digital</a></li>
+                    <li><a href="${this.basePath}servicios/dental.html" data-page="dental" title="Ir a Dental">Dental</a></li>
+                    <li><a href="${this.basePath}servicios/fiscal.html" data-page="fiscal" title="Ir a Fiscal">Fiscal</a></li>
                   </div>
                 </div>
               </ul>
             </li>
 
-            <li><a href="${this.basePath}equipo.html" data-page="equipo">EQUIPO</a></li>
+            <li><a href="${this.basePath}equipo.html" data-page="equipo" title="Ir a Equipo">EQUIPO</a></li>
 
             <li class="has-submenu" id="recursos-item">
-              <a href="#recursos" id="recursos-link">RECURSOS</a>
+              <a href="#recursos" id="recursos-link" title="Recursos">RECURSOS</a>
               <ul class="submenu" id="recursos-submenu">
                 <div class="submenu-row">
-                  <li><a href="${this.basePath}delyser-cloud.html" data-page="delyser-cloud">Delyser Cloud</a></li>
-                  <li><a href="${this.basePath}campus-delyser.html" data-page="campus-delyser">Campus Delyser</a></li>
-                  <li><a href="${this.basePath}canal360.html" data-page="canal360">Canal 360</a></li>
+                  <li><a href="${this.basePath}delyser-cloud.html" data-page="delyser-cloud" title="Ir a DelyserCloud">Delyser Cloud</a></li>
+                  <li><a href="${this.basePath}campus-delyser.html" data-page="campus-delyser" title="Ir a Campus Delyser">Campus Delyser</a></li>
+                  <li><a href="${this.basePath}canal360.html" data-page="canal360" title="Ir a Canal 360">Canal 360</a></li>
                 </div>
               </ul>
             </li>
 
-            <li><a href="${this.basePath}derecho-1-min.html" data-page="derecho-1-min">DERECHO EN 1 MIN</a></li>
-            <li><a href="${this.basePath}contacto.html" data-page="contacto">CONTACTO</a></li>
+            <li><a href="${this.basePath}derecho-1-min.html" data-page="derecho-1-min" title="Ir a Derecho en 1 minuto">DERECHO EN 1 MIN</a></li>
+            <li><a href="${this.basePath}contacto.html" data-page="contacto" title="Ir a contacto">CONTACTO</a></li>
           </ul>
         </nav>
       </header>
