@@ -1,0 +1,36 @@
+# robots.txt para Delyser Abogados
+# Permite a todos los buscadores indexar el sitio
+
+User-agent: *
+Allow: /
+
+# Bloquear archivos y carpetas innecesarias
+Disallow: /css/
+Disallow: /js/
+Disallow: /img/
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Permitir solo los archivos de imagen importantes (para Google Images)
+Allow: /img/img-index/logo-blanco.png
+Allow: /img/img-index/img-inicio.png
+Allow: /favicon.ico
+Allow: /favicon-*.png
+Allow: /apple-touch-icon.png
+
+# Bloquear archivos temporales o de desarrollo
+Disallow: /temp/
+Disallow: /test/
+Disallow: /*.txt$
+
+# Indicar la ubicación del sitemap
+Sitemap: TU_DOMINIO_FINAL/sitemap.xml
+
+# Configuración específica para diferentes bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
