@@ -96,7 +96,7 @@
 
 .texto-campus-1 .p1 {
   flex: 1;
-  max-width: 50%;
+  max-width: 100%;
   text-align: justify;
   background: rgba(255, 255, 255, 0.726);
   backdrop-filter: blur(12px);
