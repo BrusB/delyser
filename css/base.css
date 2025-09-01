@@ -113,6 +113,18 @@ p {
   font-weight: 400;
 }
 
+a {
+  /* text-decoration: none; */
+  color: var(--color-text-gray);
+}
+
+a:visited {
+  color: inherit;        
+}
+
+a:hover {
+  color: var(--color-primary) ;
+}
 /* ===========================================
    SISTEMA DE CAPAS (Z-INDEX)
    =========================================== */
