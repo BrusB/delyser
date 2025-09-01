@@ -76,11 +76,6 @@
   margin: 0 auto;
 }
 
-.texto-lit p {
-  font-family: 'Quicksand';
-  font-size: 20px;
-  font-weight: 500;
-}
 
 /* ===== ESTILO BASE PARA PÁRRAFOS ===== */
 .texto-lit .p1,
@@ -98,16 +93,16 @@
 
 /* ===== ALINEACIONES ESPECÍFICAS ===== */
 .texto-lit .p1 {
-  text-align: left;
+  text-align: justify;
 }
 
 .texto-lit .p2 {
-  text-align: right;
+  text-align: justify;
 }
 
 .texto-lit .p3,
 .texto-lit .p4 {
-  text-align: center;
+  text-align: justify;
 }
 
 /* ===== RESPONSIVE ===== */

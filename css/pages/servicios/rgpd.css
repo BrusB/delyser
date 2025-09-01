@@ -11,8 +11,8 @@
 
 .triangle-1 {
   border-left: 0px solid transparent;
-  border-right: 1000px solid transparent;
-  border-bottom: 600px solid #d4d4d4;
+  border-right: 1400px solid transparent;
+  border-bottom: 800px solid #d4d4d4;
   top: 20%;
   left: 0;
   opacity: 0.7;
@@ -25,17 +25,17 @@
   border-right: 1800px solid transparent;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: 8%;
   opacity: 0.6;
   animation: slowFloat 5s ease-in-out infinite reverse alternate;
 }
 
 .triangle-3 {
-  border-top: 800px solid #b8b8b8;
+  border-top: 1000px solid #b8b8b8;
   border-left: 0px solid transparent;
   border-right: 1600px solid transparent;
   top: -5%;
-  left: 0;
+  left: -5%;
   opacity: 0.4;
   animation: subtleRotate 5s linear infinite alternate;
   transform-origin: 50% 100%;

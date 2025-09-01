@@ -111,6 +111,11 @@
   width: 50%;
 }
 
+.texto-dig-1 img {
+  width: 400px;
+    flex-shrink: 0;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
   .p1 {
