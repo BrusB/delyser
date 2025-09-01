@@ -112,23 +112,41 @@
    =========================================== */
 .content-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Cambiado de space-between a center */
   align-items: flex-start;
   gap: var(--spacing-xl);
   width: 100%;
 }
 
-/* Texto a la izquierda */
+/* Texto - cuando está solo se centra y ocupa ancho óptimo */
 .content-row .p1 {
-  flex: 1;
-  max-width: 50%;
+  flex: 0 1 auto; /* Cambiado para que no fuerce el flex */
+  max-width: 800px; /* Ancho máximo para buena legibilidad */
+  min-width: 300px; /* Ancho mínimo */
+  width: 100%; /* Ocupa el ancho disponible */
   order: 1;
   text-align: justify;
+  margin: 0 auto; /* Centrado horizontal */
 }
 
 .content-row .p1 h2 {
-  text-align: left;
+  text-align: center; /* Centrado del título */
   margin-bottom: var(--spacing-md);
+}
+
+/* Cuando hay video: aplica estilos para dos columnas */
+.content-row:has(.video-container) {
+  justify-content: space-between;
+}
+
+.content-row:has(.video-container) .p1 {
+  flex: 1;
+  max-width: 50%;
+  margin: 0;
+}
+
+.content-row:has(.video-container) .p1 h2 {
+  text-align: left;
 }
 
 /* Video a la derecha */
@@ -249,8 +267,14 @@
     gap: var(--spacing-lg);
   }
 
-  .content-row .p1,
-  .video-container {
+  /* Para pantallas medianas, el texto sigue centrado */
+  .content-row .p1 {
+    max-width: 700px;
+  }
+
+  /* Cuando hay video en tablets */
+  .content-row:has(.video-container) .p1,
+  .content-row:has(.video-container) .video-container {
     max-width: 48%;
   }
 
@@ -272,6 +296,12 @@
     gap: var(--spacing-md);
   }
 
+  .content-row .p1 {
+    max-width: 100%;
+    order: unset;
+    margin: 0;
+  }
+
   .content-row .p1,
   .video-container {
     max-width: 100%;
@@ -283,6 +313,19 @@
   }
 
   .content-row .p1 h2 {
+    text-align: center;
+  }
+
+  /* Override para cuando hay video en mobile */
+  .content-row:has(.video-container) {
+    justify-content: center;
+  }
+
+  .content-row:has(.video-container) .p1 {
+    max-width: 100%;
+  }
+
+  .content-row:has(.video-container) .p1 h2 {
     text-align: center;
   }
 
@@ -306,6 +349,10 @@
 
   .content-row {
     gap: 1.5rem;
+  }
+
+  .content-row .p1 {
+    max-width: 100%;
   }
 
   .video-wrapper {
