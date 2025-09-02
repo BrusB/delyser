@@ -76,20 +76,33 @@
       <p>DelyserCloud administra la información de nuestros clientes para que puedan acceder a ella fácilmente y en cualquier momento puedan disponer de sus documentos.</p>
     </div>
     
-    <div class="video-container fade-in-right delay-3">
-      <div class="video-wrapper">
-        <iframe 
-          width="560" 
-          height="315" 
-          src="https://www.youtube.com/embed/rQo3yIRhWKE?si=qSCvGHK2mId-UL2R" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
+            <div class="video-container fade-in-right delay-3 animate">
+          <div class="video-wrapper">
+            <!-- Indicador de reproducción automática -->
+            <!-- <div class="autoplay-indicator">
+              Auto Play
+            </div> -->
+            
+            <!-- Video HTML5 con autoplay -->
+            <video 
+              class="video-element"
+              autoplay 
+              muted 
+              loop 
+              playsinline
+              preload="metadata"
+              poster="https://via.placeholder.com/800x450/f6c90e/ffffff?text=Delyser+Cloud+Video">
+              
+              <!-- Aquí debes cambiar la ruta por tu archivo MP4 -->
+              <source src="mp4/delyser-cloud.mp4" type="video/mp4">
+              
+              <!-- Mensaje de fallback para navegadores que no soportan video -->
+              <p>Tu navegador no soporta la reproducción de video HTML5. 
+                <a href="mp4/delyser-cloud.mp4">Descargar video</a>
+              </p>
+            </video>
+          </div>
+        </div>
   </div>
   
   <!-- SEGUNDA FILA: BOTÓN CENTRADO -->
@@ -111,7 +124,35 @@
 
 
 <button class="scroll-to-top" title="Volver arriba"></button>
-
+<script> 
+    // Script para manejar la carga del video
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.querySelector('.video-element');
+      const wrapper = document.querySelector('.video-wrapper');
+      
+      if (video && wrapper) {
+        // Añadir clase de carga
+        wrapper.classList.add('loading');
+        
+        // Cuando el video esté listo para reproducir
+        video.addEventListener('canplay', function() {
+          wrapper.classList.remove('loading');
+        });
+        
+        // En caso de error
+        video.addEventListener('error', function() {
+          wrapper.classList.remove('loading');
+          console.error('Error al cargar el video');
+        });
+        
+        // Asegurar que el video se reproduce automáticamente
+        video.addEventListener('loadedmetadata', function() {
+          video.play().catch(function(error) {
+            console.log('Autoplay fue bloqueado:', error);
+          });
+        });
+      }
+    });</script> 
 <script src="js/btn-scroll.js"></script>
 <script src="js/footer.js"></script>
 <script src="js/scroll-animations2.js"></script>
