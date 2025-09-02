@@ -166,7 +166,7 @@
 }
 
 /* Enlaces de email */
-.email-link {
+/* .email-link {
   color: var(--color-text-gray);
   text-decoration: underline;
   transition: color var(--transition-fast);
@@ -181,7 +181,7 @@
 .email-link:focus {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
-}
+} */
 
 /* ===========================================
    ICONOS SOCIALES ESPECÍFICOS

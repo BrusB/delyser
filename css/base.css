@@ -113,19 +113,19 @@ p {
   font-weight: 400;
 }
 
-a {
+.enlace {
   color: var(--color-text-gray);
   text-decoration: underline;
   transition: color var(--transition-fast);
   font-weight: 500;
 }
 
-a:hover {
+.enlace:hover {
   color: var(--color-primary);
   text-decoration: none;
 }
 
-a:focus {
+.enlace:focus {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }

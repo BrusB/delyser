@@ -145,7 +145,7 @@ class DelyserlIncludes {
             <div class="footer-contact">
               <p>T: (+34) 91 541 01 47</p>
               <p>F: (+34) 91 542 66 98</p>
-              <p>delyser@delyser.com</p>
+              <p><a href="mailto:deluser@deluser.com" class="enlace">delyser@delyser.com</a></p>
             </div>
           </div>
           
